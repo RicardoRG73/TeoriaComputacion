@@ -4,10 +4,11 @@
 
 ## Estado actual del repositorio
 - **Temario y referencias (`README.md`):** Completo (Primer Semestre, clave `ISYSI0430`, referencias APA 7.ª ed. con De Castro Korgi como texto principal, estructura e índice de unidades).
-- **Apuntes (`notas/`):** 38 archivos creados con estructura base (6 unidades `X-0-*.md` y 32 subtemas `X-Y-*.md`). Pendiente el desarrollo teórico detallado por subtema.
+- **Apuntes (`notas/`):** 38 archivos desarrollados completamente (6 unidades `X-0-*.md` y 32 subtemas `X-Y-*.md`) con teoría formal, notación LaTeX, diagramas `mermaid`, ejemplos paso a paso, ejercicios propuestos y referencias APA basadas en De Castro Korgi (2004) y Acevedo Juárez (2006).
 - **Diapositivas (`diapositivas/`):** Directorio preparado, pendiente de contenido.
 
 ## Historial de cambios
+- 2026-11-21: Desarrollo teórico completo de los 38 archivos de apuntes en `notas/` (Unidades 1 a 6) con definiciones formales, teoremas, diagramas `mermaid`, ejemplos resueltos, ejercicios propuestos y referencias APA.
 - 2026-11-21: Se agregó la sección `## Estructura del repositorio` e índice de unidades en `README.md`; se ampliaron y mejoraron `GEMINI.md` (notación matemática, diagramas y flujo de trabajo) y `MEMORY.md` (sección de estado actual).
 - 2026-11-21: Creación inicial de `GEMINI.md` (harness del proyecto) y `MEMORY.md` (registro de cambios con límite de 50 líneas).
 - 2026-11-21: Creación de los 38 archivos Markdown base en `notas/` para las 6 unidades y 32 subtemas del temario.
