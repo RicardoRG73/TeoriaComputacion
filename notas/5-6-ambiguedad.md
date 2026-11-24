@@ -2,6 +2,8 @@
 
 En la Unidad 2 se estudió la ambigüedad como una propiedad estructural de las gramáticas independientes del contexto (De Castro Korgi, 2004, Secc. 4.4, pp. 91–94). Al incorporar el modelo operacional de los autómatas con pila, dicha propiedad adquiere un significado computacional preciso: la ambigüedad gramatical se traduce directamente en la existencia de **múltiples cómputos de aceptación** dentro del autómata *pushdown* correspondiente, lo cual impone límites fundamentales al análisis sintáctico determinista en compiladores.
 
+![5.6 Ambigüedad](../figuras/5-6-ambiguedad.svg)
+
 ---
 
 ## Ambigüedad en GIC y múltiples cómputos de aceptación en AFPN
@@ -53,11 +55,11 @@ flowchart LR
 
 ## Conflictos en analizadores sintácticos deterministas
 
-En la construcción de compiladores resulta deseable implementar el analizador sintáctico como un **AFPD** (en tiempo lineal $O(\lvert w \rvert)$ sin retrocesos ni exploración exponencial de ramas). Cuando una gramática es ambigua —o simplemente no apta para análisis determinista con preanálisis acotado ($k$ *tokens* de *lookahead*)—, el intento de construir una tabla de transición determinista genera **conflictos**:
+En la construcción de compiladores resulta deseable implementar el analizador sintáctico como un **AFPD** que lea la entrada de una sola pasada (en tiempo lineal $O(\lvert w \rvert)$, sin retrocesos ni pruebas múltiples). Cuando una gramática es ambigua —o cuando el autómata no puede decidir qué hacer mirando solo el siguiente símbolo de la entrada—, el intento de construir una tabla determinista genera **conflictos**:
 
-1. **En analizadores descendentes (LL):**
+1. **En analizadores descendentes (tipo LL, que predicen desde la raíz):**
    - **Conflicto de predicción:** Ante la variable $A$ en el tope de la pila y un mismo símbolo de entrada $a$, existen dos producciones distintas $A \to u_1$ y $A \to u_2$ que pueden comenzar derivando $a$. Las causas más frecuentes son la ambigüedad, los factores comunes por la izquierda ($A \to aB \mid aC$) y la recursividad izquierda ($A \to A\alpha \mid \beta$).
-2. **En analizadores ascendentes (LR / *shift-reduce*):**
+2. **En analizadores ascendentes (desplazamiento–reducción o *shift-reduce*):**
    - **Conflicto desplazamiento–reducción (*shift/reduce*):** El autómata no puede decidir determinísticamente entre apilar el siguiente terminal de la entrada o reducir el tope actual de la pila mediante $A \to u$. Ocurre clásicamente en gramáticas de expresiones sin precedencia y en la sentencia condicional opcional (*dangling else*).
    - **Conflicto reducción–reducción (*reduce/reduce*):** Dos producciones distintas $A \to u$ y $B \to u$ (o con sufijos coincidentes) compiten simultáneamente para reducir el tope de la pila.
 
@@ -78,7 +80,7 @@ El ejemplo clásico presentado por De Castro Korgi (2004, p. 93) es la unión de
 
 $$L = \{a^i b^i c^j d^j : i, j \ge 1\} \cup \{a^i b^j c^j d^i : i, j \ge 1\}.$$
 
-$L$ es un LIC (basta tomar la unión de la GIC que empareja $(a,b)$ y $(c,d)$ con la GIC que empareja $(a,d)$ y $(b,c)$). No obstante, las cadenas de la intersección $\{a^k b^k c^k d^k : k \ge 1\}$ satisfacen ambas restricciones simultáneamente. Mediante el Lema de Ogden puede demostrarse que cualquier GIC que genere $L$ requiere subestructuras de derivación separadas para forzar $i = \lvert a \rvert = \lvert b \rvert$ (junto a $\lvert c \rvert = \lvert d \rvert$) y para forzar $\lvert a \rvert = \lvert d \rvert$ (junto a $\lvert b \rvert = \lvert c \rvert$), por lo que para valores suficientemente grandes de $k$, toda cadena $a^k b^k c^k d^k$ poseerá al menos dos árboles de derivación distintos en cualquier gramática para $L$.
+$L$ es un LIC (basta tomar la unión de la GIC que empareja $(a,b)$ y $(c,d)$ con la GIC que empareja $(a,d)$ y $(b,c)$). No obstante, las cadenas de la intersección $\{a^k b^k c^k d^k : k \ge 1\}$ satisfacen ambas restricciones simultáneamente. Mediante técnicas avanzadas de bombeo puede demostrarse que cualquier GIC que genere $L$ requiere subestructuras de derivación separadas para forzar $i = \lvert a \rvert = \lvert b \rvert$ (junto a $\lvert c \rvert = \lvert d \rvert$) y para forzar $\lvert a \rvert = \lvert d \rvert$ (junto a $\lvert b \rvert = \lvert c \rvert$), por lo que para valores suficientemente grandes de $k$, toda cadena $a^k b^k c^k d^k$ poseerá al menos dos árboles de derivación distintos en cualquier gramática para $L$.
 
 ### Resultados negativos de indecidibilidad
 
@@ -145,7 +147,7 @@ Al construir el AFPN descendente $M_G$ (Secc. 5.4.2), la transición espontánea
 
 $$E \longrightarrow E + T \mid T, \qquad T \longrightarrow T * F \mid F, \qquad F \longrightarrow (E) \mid N, \qquad N \longrightarrow 0N \mid 1N \mid 0 \mid 1.$$
 
-En esta gramática estratificada, la multiplicación queda ligada a nivel de término $T$ y la suma a nivel de expresión $E$: la cadena $1 + 1 * 0$ admite únicamente la interpretación $1 + (1 * 0)$ y un análisis determinista LR(1) (o LL(1) tras eliminar la recursividad izquierda).
+En esta gramática estratificada, la multiplicación queda ligada a nivel de término $T$ y la suma a nivel de expresión $E$: la cadena $1 + 1 * 0$ admite únicamente la interpretación $1 + (1 * 0)$ y puede analizarse de manera determinista sin ambigüedades.
 
 ---
 
@@ -163,7 +165,7 @@ En el AFPN $M_G$, tras leer `aa` y vaciar $S$, la pila contiene $AAz_0$ en $(q_1
 - **Cómputo 1:** aplica $(q_1, \lambda) \in \Delta(q_1, \lambda, A)$ para descartar la primera $A$ y luego expande la segunda $A \to bA \to b$, llegando a $(q_2, \lambda, z_0)$.
 - **Cómputo 2:** expande inmediatamente la primera $A \to bA$, consume $b$, anula esa $A$ y luego anula la segunda $A$, llegando también a $(q_2, \lambda, z_0)$.
 
-Esta ambigüedad se elimina completamente reescribiendo $L(G) = a^+ b^* \cup \{\lambda\}$ con una gramática no ambigua (de hecho LL(1) determinista):
+Esta ambigüedad se elimina completamente reescribiendo $L(G) = a^+ b^* \cup \{\lambda\}$ con una gramática no ambigua y apta para análisis determinista directo:
 
 $$S \longrightarrow AB \mid \lambda, \qquad A \longrightarrow aA \mid a, \qquad B \longrightarrow bB \mid \lambda.$$
 

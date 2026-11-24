@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="3.3 Equivalencia externa (M₁ ≡ M₂) y determinización AFN-λ → AFN → AFD">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">3.3 Equivalencia externa (M₁ ≡ M₂) y determinización AFN-λ → AFN → AFD</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Dos máquinas son equivalentes si producen la misma respuesta para toda cadena w ∈ Σ*</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="84" width="415" height="244" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="245" y="110" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#204254">Equivalencia entrada–salida (M₁ ≡ M₂)</text>
+  <rect x="70" y="136" width="145" height="56" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="142.5" y="160.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Máquina M₁</text>
+  <text x="142.5" y="177.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">3 estados</text>
+  <rect x="70" y="214" width="145" height="56" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="142.5" y="238.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Máquina M₂</text>
+  <text x="142.5" y="255.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">2 estados</text>
+  <rect x="265" y="165" width="165" height="76" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="347.5" y="199.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">∀ w ∈ Σ*</text>
+  <text x="347.5" y="216.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">ω̂₁(q₀₁, w) = ω̂₂(q₀₂, w)</text>
+  <line x1="215" y1="164" x2="262" y2="192" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <line x1="215" y1="242" x2="262" y2="214" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <text x="245" y="304" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#B94A3E">En aceptadores: L(M₁) = L(M₂)</text>
+  <rect x="478" y="84" width="444" height="244" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="2"/>
+  <text x="700" y="110" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#B94A3E">Equivalencia de aceptadores finitos</text>
+  <rect x="502" y="142" width="110" height="60" rx="9" fill="#FFFFFF" stroke="#CBD6DE" stroke-width="2"/>
+  <text x="557.0" y="168.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">AFN-λ</text>
+  <text x="557.0" y="185.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Con λ-saltos</text>
+  <line x1="612" y1="172" x2="650" y2="172" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="611.4" y="152.0" width="39.2" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="631.0" y="164.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">λ[q]</text>
+  <rect x="654" y="142" width="105" height="60" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="706.5" y="168.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">AFN</text>
+  <text x="706.5" y="185.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">No det.</text>
+  <line x1="759" y1="172" x2="797" y2="172" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="758.4" y="152.0" width="39.2" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="778.0" y="164.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">P(Q)</text>
+  <rect x="801" y="142" width="100" height="60" rx="9" fill="#B94A3E" stroke="#93362C" stroke-width="2"/>
+  <text x="851.0" y="168.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">AFD</text>
+  <text x="851.0" y="185.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Det.</text>
+  <rect x="510" y="228" width="385" height="76" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="702.5" y="262.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Construcción de subconjuntos</text>
+  <text x="702.5" y="279.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Cada estado del AFD representa un conjunto S ⊆ Q de estados activos simultáneamente</text>
+</svg>

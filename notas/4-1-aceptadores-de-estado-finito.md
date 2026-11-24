@@ -4,9 +4,11 @@
 
 En la Unidad 3 se estudiaron las máquinas de estado finito como sistemas con entradas y salidas que transforman secuencias de símbolos (transductores de Mealy y Moore). En el estudio de los lenguajes formales, sin embargo, resulta fundamental analizar máquinas cuyo único propósito es **decidir si una cadena pertenece o no a un lenguaje**: los **aceptadores** o **reconocedores de estado finito**, comúnmente llamados **autómatas finitos**.
 
-La motivación práctica más directa proviene de la primera fase de un compilador: el **análisis léxico**. Cuando un compilador lee un programa fuente como un flujo continuo de caracteres, el analizador léxico (*scanner*) debe agruparlos en unidades con significado (*tokens*), tales como identificadores, literales numéricos o palabras clave. Puesto que la memoria de control de un autómata finito es acotada y fija (su conjunto finito de estados) y su cabeza lectora avanza estrictamente de izquierda a derecha sin retroceder ni escribir sobre la cinta, el reconocimiento de cada cadena de longitud $|w|$ requiere exactamente $|w|$ pasos deterministas, logrando una complejidad temporal $O(|w|)$ óptima.
+La motivación práctica más directa proviene de la primera fase de un compilador: el **análisis léxico**. Cuando un compilador lee un programa fuente como un flujo continuo de caracteres, el analizador léxico (*scanner*) debe agruparlos en unidades con significado (*tokens*), tales como identificadores, literales numéricos o palabras clave. Puesto que la memoria de control de un autómata finito es acotada y fija (su conjunto finito de estados) y su cabeza lectora avanza estrictamente de izquierda a derecha sin retroceder ni escribir sobre la cinta, el reconocimiento de cada cadena de longitud $|w|$ requiere exactamente $|w|$ pasos deterministas: es decir, el tiempo de revisión crece de forma directamente proporcional al tamaño de la cadena ($O(|w|)$), un paso por símbolo.
 
 A lo largo de esta sección formalizaremos las tres variantes clásicas de aceptadores finitos —**deterministas** (AFD), **no deterministas** (AFN) y **con transiciones $\lambda$** ($\text{AFN-}\lambda$)— y demostraremos que, a pesar de la aparente mayor libertad del no determinismo y las transiciones espontáneas, los tres modelos poseen exactamente el mismo poder computacional.
+
+![4.1 Aceptadores de estado finito](../figuras/4-1-aceptadores-de-estado-finito.svg)
 
 ---
 
@@ -160,7 +162,7 @@ Para $w = \lambda$, se tiene $\lambda \in L(M') \iff q_0 \in F' \iff E(q_0) \cap
 3. $\delta(S, a) = \Delta'(S, a) = \bigcup_{q \in S} \Delta'(q, a)$ para todo $S \in Q''$ y $a \in \Sigma$.
 4. $F'' = \{S \in Q'' : S \cap F' \neq \emptyset\}$.
 
-**Demostración.** Probaremos por inducción estructural sobre $w \in \Sigma^*$ que $\hat{\delta}(\{q_0\}, w) = \hat{\Delta}'(q_0, w)$:
+**Demostración.** Probaremos por inducción sobre la longitud de la cadena $w \in \Sigma^*$ (probando primero para la cadena vacía $\lambda$ y luego viendo qué ocurre al añadir un símbolo $a$ al final) que $\hat{\delta}(\{q_0\}, w) = \hat{\Delta}'(q_0, w)$:
 - *Base ($w = \lambda$):* $\hat{\delta}(\{q_0\}, \lambda) = \{q_0\} = \hat{\Delta}'(q_0, \lambda)$.
 - *Paso inductivo ($w = ua$, con $u \in \Sigma^*$ y $a \in \Sigma$):* suponiendo $\hat{\delta}(\{q_0\}, u) = \hat{\Delta}'(q_0, u)$,
   $$\begin{aligned}

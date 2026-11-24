@@ -4,6 +4,8 @@
 
 En la sección anterior se comprobó que dos derivaciones arbitrarias distintas pueden generar exactamente el mismo árbol de derivación, puesto que el árbol solo captura la estructura jerárquica de la cadena y no el orden en que se expanden ramas independientes. Sin embargo, cuando una gramática libre del contexto admite **dos o más árboles de derivación diferentes** para una misma cadena terminal $w$, dicha cadena posee **múltiples estructuras sintácticas**. En el diseño de compiladores, donde el árbol sintáctico determina directamente la evaluación semántica de una expresión o el flujo de control de un programa, esta multiplicidad representa una ambigüedad crítica que debe detectarse y resolverse (De Castro Korgi, 2004, Secc. 4.4–4.5; Acevedo Juárez, 2006, Secc. 3.3, 3.8).
 
+![2.6 Ambigüedad](../figuras/2-6-ambiguedad.svg)
+
 ## Definición formal de gramática ambigua
 
 ### Definición 2.6.1 (Gramática ambigua)
@@ -25,7 +27,7 @@ La **ambigüedad** es una propiedad de la **gramática**, no necesariamente del 
 
 En el contexto de los lenguajes de programación existen dos estrategias principales:
 1. **Reescritura estructural de la gramática:** Introducir variables auxiliares por niveles para codificar explícitamente la **precedencia** de operadores, la **asociatividad** (por la izquierda o por la derecha) o el **emparejamiento** de estructuras condicionales.
-2. **Reglas externas de desambiguación (De Castro Korgi, 2004, p. 92):** Conservar una gramática más compacta aunque ambigua —como $E \to E + E \mid E * E \mid \dots$— e indicar al generador de analizadores sintácticos (como Yacc/Bison) prioridades explícitas para resolver conflictos entre operadores.
+2. **Reglas externas de desambiguación (De Castro Korgi, 2004, p. 92):** Conservar una gramática más compacta aunque ambigua —como $E \to E + E \mid E * E \mid \dots$— e indicar directamente a la herramienta que construye el analizador sintáctico del compilador qué operador tiene mayor prioridad (por ejemplo, que `*` se evalúe antes que `+`).
 
 ### El problema del *dangling else* (*else* colgante)
 
@@ -55,11 +57,11 @@ El ejemplo clásico citado por De Castro Korgi (2004, p. 93) es el lenguaje sobr
 
 $$L = \{a^i b^i c^j d^j \mid i, j \ge 1\} \cup \{a^i b^j c^j d^i \mid i, j \ge 1\}$$
 
-Intuitivamente, aunque cada componente por separado posee una GIC no ambigua ($S_1 \to A B$, $A \to aAb \mid ab$, $B \to cBd \mid cd$ para el primero; $S_2 \to a S_2 d \mid a C d$, $C \to bCc \mid bc$ para el segundo), cualquier GIC que genere la unión debe usar dos mecanismos incompatibles para generar cadenas de la intersección $\{a^n b^n c^n d^n \mid n \ge 1\}$ (emparejar $(a,b)$ con $(c,d)$ frente a emparejar $(a,d)$ con $(b,c)$). Puede demostrarse mediante el lema de Ogden que toda GIC para $L$ genera forzosamente dos árboles distintos para $a^n b^n c^n d^n$ cuando $n$ es suficientemente grande.
+Intuitivamente, aunque cada componente por separado posee una GIC no ambigua ($S_1 \to A B$, $A \to aAb \mid ab$, $B \to cBd \mid cd$ para el primero; $S_2 \to a S_2 d \mid a C d$, $C \to bCc \mid bc$ para el segundo), cualquier GIC que genere la unión debe usar dos mecanismos incompatibles para generar cadenas de la intersección $\{a^n b^n c^n d^n \mid n \ge 1\}$ (emparejar $(a,b)$ con $(c,d)$ frente a emparejar $(a,d)$ con $(b,c)$). Mediante técnicas avanzadas de bombeo puede demostrarse que toda GIC para $L$ genera forzosamente dos árboles distintos para $a^n b^n c^n d^n$ cuando $n$ es suficientemente grande.
 
 ### Indecidibilidad de la ambigüedad
 
-Un resultado teórico profundo (De Castro Korgi, 2004, p. 93) establece que **el problema de determinar si una GIC arbitraria $G$ es ambigua es indecidible**: no existe ningún algoritmo general que reciba cualquier GIC $G$ y responda siempre correctamente `SÍ` o `NO` a la pregunta *"¿es $G$ ambigua?"*. Esto no impide demostrar la ambigüedad de gramáticas concretas exhibiendo una cadena con dos árboles, ni demostrar la no ambigüedad de gramáticas diseñadas cuidadosamente (como las gramáticas LL o LR deterministas).
+Un resultado teórico profundo (De Castro Korgi, 2004, p. 93) establece que **el problema de determinar si una GIC arbitraria $G$ es ambigua es indecidible**: no existe ningún algoritmo general que reciba cualquier GIC $G$ y responda siempre correctamente `SÍ` o `NO` a la pregunta *"¿es $G$ ambigua?"*. Esto no impide demostrar la ambigüedad de gramáticas concretas exhibiendo una cadena con dos árboles, ni diseñar gramáticas sin ambigüedad que los compiladores puedan analizar paso a paso sin dudar (como las que se estudiarán en asignaturas posteriores de compiladores).
 
 ## Ejemplos desarrollados paso a paso
 

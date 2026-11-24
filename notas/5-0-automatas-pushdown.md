@@ -20,6 +20,8 @@ flowchart TD
     T54 -->|"Múltiples cómputos ⇔ múltiples derivaciones"| T56
 ```
 
+![Unidad 5: Autómatas Pushdown](../figuras/5-0-automatas-pushdown.svg)
+
 ## Subtemas
 
 - [5.1 Introducción](5-1-introduccion.md)

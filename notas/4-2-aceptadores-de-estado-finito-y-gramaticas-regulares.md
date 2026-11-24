@@ -6,11 +6,13 @@ En las unidades precedentes se abordaron dos perspectivas aparentemente distinta
 
 En esta sección demostraremos que las **gramáticas regulares** (tipo 3 en la jerarquía de Chomsky) generan exactamente la misma familia de lenguajes que aceptan los autómatas finitos.
 
+![4.2 Aceptadores de estado finito y gramáticas regulares](../figuras/4-2-aceptadores-de-estado-finito-y-gramaticas-regulares.svg)
+
 ---
 
 ## 4.2.1 Gramáticas regulares y variantes lineales
 
-Recordemos de la Unidad 2 que una gramática generativa es una 4-tupla $G = (V, \Sigma, S, P)$, donde $V$ es un alfabeto finito de variables o no terminales, $\Sigma$ es el alfabeto de terminales ($V \cap \Sigma = \emptyset$), $S \in V$ es el símbolo inicial y $P$ es un conjunto finito de producciones. La derivación directa $\alpha \Rightarrow \beta$ representa la aplicación de una producción de $P$, y $\alpha \Rightarrow^* \beta$ su clausura reflexiva y transitiva. El lenguaje generado por $G$ es $L(G) = \{w \in \Sigma^* : S \Rightarrow^* w\}$.
+Recordemos de la Unidad 2 que una gramática generativa es una 4-tupla $G = (V, \Sigma, S, P)$, donde $V$ es un alfabeto finito de variables o no terminales, $\Sigma$ es el alfabeto de terminales ($V \cap \Sigma = \emptyset$), $S \in V$ es el símbolo inicial y $P$ es un conjunto finito de producciones. La derivación directa $\alpha \Rightarrow \beta$ representa la aplicación de una producción de $P$, y $\alpha \Rightarrow^* \beta$ representa aplicar cero, una o varias producciones seguidas (clausura reflexiva y transitiva). El lenguaje generado por $G$ es $L(G) = \{w \in \Sigma^* : S \Rightarrow^* w\}$.
 
 ### Definición formal (gramática regular estricta)
 
@@ -60,6 +62,8 @@ Dado un AFD $M = (Q, \Sigma, \delta, q_0, F)$, se construye la gramática regula
 *(Observación: la misma construcción funciona directamente si se parte de un AFN $M = (Q, \Sigma, \Delta, q_0, F)$, añadiendo $q \to ap$ por cada $p \in \Delta(q, a)$.)*
 
 #### Demostración de corrección ($L(M) = L(G)$)
+
+> **Idea intuitiva:** Cada transición $\delta(q, a) = p$ en el autómata hace exactamente lo mismo que aplicar la regla $q \to ap$ en la gramática: genera o consume el símbolo $a$ y cambia del estado/variable $q$ al estado/variable $p$. Al llegar a un estado de aceptación $p \in F$, la regla $p \to \lambda$ cierra la derivación dejando solo los símbolos terminales leídos.
 
 Demostraremos primero dos afirmaciones auxiliares para toda cadena no vacía $w \in \Sigma^+$ y todo par de estados $q, p \in Q$:
 

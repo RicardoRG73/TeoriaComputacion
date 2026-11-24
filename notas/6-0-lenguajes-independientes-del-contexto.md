@@ -29,6 +29,8 @@ flowchart TD
     FNG2 --> FNG["Forma Normal de Greibach (FNG): A → aα"]
 ```
 
+![Unidad 6: Lenguajes Independientes del Contexto](../figuras/6-0-lenguajes-independientes-del-contexto.svg)
+
 ## Subtemas
 
 - [6.1 Transformaciones elementales de gramáticas](6-1-transformaciones-elementales-de-gramaticas.md)

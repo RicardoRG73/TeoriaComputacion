@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="3.4 Refinamiento sucesivo de particiones (k-equivalencia ≡_k)">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">3.4 Refinamiento sucesivo de particiones (k-equivalencia ≡_k)</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Los estados se subdividen en cajas cada vez más finas hasta estabilizarse (P_{k+1} = P_k)</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="40" y="100" width="170" height="180" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="125.0" y="178.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">P₀ (k = 0)</text>
+  <text x="125.0" y="195.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">AFD: {F} vs {Q \ F}</text>
+  <text x="125.0" y="212.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">[q₀,q₁,q₃] | [q₂,q₄]</text>
+  <line x1="210" y1="190" x2="250" y2="190" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="203.6" y="170.0" width="52.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="230.0" y="182.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">δ(q,a)</text>
+  <rect x="254" y="100" width="200" height="180" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="354.0" y="178.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">P₁ (k = 1)</text>
+  <text x="354.0" y="195.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">q₀ se separa de q₁,q₃</text>
+  <text x="354.0" y="212.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">[q₀] | [q₁,q₃] | [q₂,q₄]</text>
+  <line x1="454" y1="190" x2="494" y2="190" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="447.6" y="170.0" width="52.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="474.0" y="182.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">δ(q,a)</text>
+  <rect x="498" y="100" width="200" height="180" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="598.0" y="178.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">P₂ = P₁ (Estable)</text>
+  <text x="598.0" y="195.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">No hay más divisiones</text>
+  <text x="598.0" y="212.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">⇒  ≡  =  ≡₁</text>
+  <line x1="698" y1="190" x2="738" y2="190" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="688.2" y="170.0" width="59.6" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="718.0" y="182.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">fusiona</text>
+  <rect x="742" y="100" width="180" height="180" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="832.0" y="170.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Clases finales</text>
+  <text x="832.0" y="187.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">C₀ = {q₀}</text>
+  <text x="832.0" y="204.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">C₁ = {q₁, q₃}</text>
+  <text x="832.0" y="221.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">C₂ = {q₂, q₄}</text>
+  <text x="480" y="316" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#204254">Cota de Moore (1956): con n = |Q| estados, el refinamiento converge en a lo sumo n - 1 pasos</text>
+</svg>

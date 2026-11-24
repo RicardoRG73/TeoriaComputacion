@@ -21,6 +21,8 @@ flowchart LR
     A --> A1["Autómata o máquina abstracta M"]
 ```
 
+![2.1 Representación de los lenguajes](../figuras/2-1-representacion-de-los-lenguajes.svg)
+
 ## Mecanismos de representación finita
 
 ### 1. Representación por extensión
@@ -90,7 +92,7 @@ Un **autómata** o máquina abstracta $M$ representa un lenguaje $L(M)$ de maner
 
 ### Nota teórica sobre la existencia de lenguajes sin representación finita
 
-Aunque disponemos de formalismos tan expresivos como las gramáticas generales o las Máquinas de Turing, **no todo lenguaje $L \subseteq \Sigma^*$ posee una representación finita**. Toda descripción finita (ya sea una expresión regular, una gramática o una Máquina de Turing) puede codificarse como una cadena finita sobre un alfabeto fijo, por lo que el conjunto de todas las representaciones finitas posibles es **infinito numerable** ($\aleph_0$). En contraste, el conjunto potencia $\mathcal{P}(\Sigma^*)$ —la totalidad de los lenguajes sobre $\Sigma$— es **no numerable** ($2^{\aleph_0}$). Por un argumento de cardinalidad (teorema de Cantor), existen infinidad de lenguajes para los cuales no existe ninguna gramática, ningún autómata ni ninguna descripción finita posible.
+Aunque disponemos de formalismos tan expresivos como las gramáticas generales o las Máquinas de Turing, **no todo lenguaje $L \subseteq \Sigma^*$ posee una representación finita**. La razón es intuitiva: cualquier descripción finita (ya sea una expresión regular, una gramática o un programa) es un texto de longitud finita, de modo que todas las descripciones posibles pueden enumerarse en una lista ordenada (primera receta, segunda receta, tercera receta, etc.). Sin embargo, la totalidad de los subconjuntos de cadenas posibles ($\mathcal{P}(\Sigma^*)$) forma un infinito estrictamente más grande que no cabe en ninguna lista numerable. Por ello, existen lenguajes para los cuales jamás podrá escribirse ninguna gramática, ningún autómata ni ninguna regla finita.
 
 ## Cuadro comparativo de representaciones
 

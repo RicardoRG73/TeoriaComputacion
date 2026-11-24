@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="3.2 Conversión bidireccional: Moore → Mealy y Mealy → Moore">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">3.2 Conversión bidireccional: Moore → Mealy y Mealy → Moore</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Equivalencia entrada–salida módulo símbolo inicial ω(q₀)</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="86" width="426" height="242" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="251" y="112" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#204254">Moore → Mealy (conserva los estados)</text>
+  <circle cx="115" cy="195" r="24" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="115" y="193" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">q</text>
+  <text x="115" y="209" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">ω(q)</text>
+  <circle cx="235" cy="195" r="24" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="235" y="193" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">p</text>
+  <text x="235" y="209" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">y = 1</text>
+  <line x1="139" y1="195" x2="208" y2="195" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="164.1" y="175.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="173.5" y="187.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">a</text>
+  <line x1="268" y1="195" x2="315" y2="195" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="348" cy="195" r="22" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="348" y="200" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q</text>
+  <circle cx="430" cy="195" r="22" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="430" y="200" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">p</text>
+  <line x1="370" y1="195" x2="405" y2="195" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="364.5" y="175.0" width="46.0" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="387.5" y="187.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">a / 1</text>
+  <text x="251" y="275" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#121B22">ω_Mealy(q, a) = ω_Moore(δ(q, a))</text>
+  <text x="251" y="302" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4E606D">Se traslada la salida del destino a la flecha</text>
+  <rect x="496" y="86" width="426" height="242" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="2"/>
+  <text x="709" y="112" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#B94A3E">Mealy → Moore (desdoblamiento Q × Δ)</text>
+  <circle cx="585" cy="195" r="26" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="585" y="193" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">q1</text>
+  <text x="585" y="209" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">entran 0, 1</text>
+  <line x1="525" y1="175" x2="558" y2="186" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="525.3" y="160.5" width="32.4" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="541.5" y="172.5" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">0/0</text>
+  <line x1="525" y1="215" x2="558" y2="204" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="525.3" y="189.5" width="32.4" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="541.5" y="201.5" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">1/1</text>
+  <line x1="620" y1="195" x2="685" y2="162" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <line x1="620" y1="195" x2="685" y2="228" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="690" y="134" width="205" height="46" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="792.5" y="153.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Copia C = (q1, 0)</text>
+  <text x="792.5" y="170.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">ω(C) = 0</text>
+  <rect x="690" y="204" width="205" height="46" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="792.5" y="223.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Copia D = (q1, 1)</text>
+  <text x="792.5" y="240.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">ω(D) = 1</text>
+  <text x="709" y="282" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#121B22">Cada salida entrante distinta crea una copia (q, y)</text>
+  <text x="709" y="304" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4E606D">Todas las copias de q comparten las salidas δ</text>
+</svg>

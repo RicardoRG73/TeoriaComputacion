@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="1.3 Lenguajes abstractos: sintaxis frente a semántica">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">1.3 Lenguajes abstractos: sintaxis frente a semántica</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Flujo de validación en compiladores y relación conjuntista ∅ ⊆ L ⊆ Σ*</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="35" y="92" width="165" height="64" rx="9" fill="#FFFFFF" stroke="#CBD6DE" stroke-width="2"/>
+  <text x="117.5" y="120.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Código fuente</text>
+  <text x="117.5" y="137.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Cadena w ∈ Σ*</text>
+  <rect x="245" y="92" width="175" height="64" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="332.5" y="120.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Análisis Léxico</text>
+  <text x="332.5" y="137.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Símbolos y tokens</text>
+  <rect x="465" y="92" width="195" height="64" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="562.5" y="120.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Análisis Sintáctico</text>
+  <text x="562.5" y="137.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">¿Cumple gramática? (w ∈ L)</text>
+  <rect x="705" y="92" width="220" height="64" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="815.0" y="120.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">Análisis Semántico</text>
+  <text x="815.0" y="137.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Tipos y sentido válido</text>
+  <line x1="200" y1="124" x2="241" y2="124" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <line x1="420" y1="124" x2="461" y2="124" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <line x1="660" y1="124" x2="701" y2="124" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="35" y="186" width="890" height="142" rx="10" fill="#FFFFFF" stroke="#CBD6DE" stroke-width="1.5"/>
+  <text x="150" y="216" text-anchor="start" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#204254">Universo Σ* (todas las cadenas)</text>
+  <ellipse cx="585" cy="257" rx="295" ry="54" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <ellipse cx="565" cy="260" rx="185" ry="37" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="565" y="255" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#B94A3E">Lenguaje L ⊆ Σ*</text>
+  <text x="565" y="275" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#121B22">Ej.: x=42; ∈ L   |   42=x; ∈ Σ* \ L</text>
+  <text x="785" y="240" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#204254">w ∉ L</text>
+  <text x="195" y="255" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#121B22">Casos extremos:</text>
+  <text x="195" y="278" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#4E606D">∅ (vacío)  ⊆  L  ⊆  Σ* (universal)</text>
+</svg>

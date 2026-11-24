@@ -6,6 +6,8 @@ Antes de que existiera la primera computadora electrónica programable, los mate
 
 Con este fin nacen las **máquinas abstractas**: modelos matemáticos rigurosos que capturan la esencia del cómputo automático —de ahí el término **autómata**, sinónimo de máquina de cómputo automático (De Castro Korgi, 2004, p. 4)— y permiten clasificar los problemas según la potencia de memoria y control que requieren.
 
+![1.2 Máquinas abstractas y algoritmos](../figuras/1-2-maquinas-abstractas-y-algoritmos.svg)
+
 ## Definición de máquina abstracta, algoritmo y procedimiento efectivo
 
 ### Máquina abstracta

@@ -25,6 +25,8 @@ flowchart LR
     GR --- LR
 ```
 
+![Unidad 4: Lenguajes de Estado Finito](../figuras/4-0-lenguajes-de-estado-finito.svg)
+
 ## Subtemas
 
 - [4.1 Aceptadores de estado finito](4-1-aceptadores-de-estado-finito.md) — Definición formal de AFD, AFN y $\text{AFN-}\lambda$, extensión de la función de transición $\hat{\delta}$, clausura-$\lambda$ y algoritmos constructivos de equivalencia ($\text{AFN-}\lambda \to \text{AFN} \to \text{AFD}$).

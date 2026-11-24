@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="1.7 Operaciones conjuntistas y clausuras de Kleene (A* y A+)">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">1.7 Operaciones conjuntistas y clausuras de Kleene (A* y A+)</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Construcción de lenguajes mediante unión, intersección, concatenación y potencias</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="86" width="350" height="245" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="213" y="112" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#204254">Operaciones booleanas sobre Σ*</text>
+  <circle cx="170" cy="195" r="58" fill="#EEF3F6" fill-opacity="0.7" stroke="#204254" stroke-width="2"/>
+  <circle cx="255" cy="195" r="58" fill="#FDF4F2" fill-opacity="0.7" stroke="#B94A3E" stroke-width="2"/>
+  <text x="140" y="195" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#204254">A - B</text>
+  <text x="212" y="195" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#121B22">A ∩ B</text>
+  <text x="285" y="195" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#B94A3E">B - A</text>
+  <text x="213" y="285" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="600" fill="#4E606D">Unión: A ∪ B  |  Complemento: Σ* - A</text>
+  <text x="213" y="308" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">A · ∅ = ∅  (absorbente)  vs.  A · {λ} = A  (neutro)</text>
+  <rect x="415" y="86" width="505" height="245" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="2"/>
+  <text x="667" y="112" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#B94A3E">Clausura de Kleene (A*) y Positiva (A+)</text>
+  <rect x="440" y="134" width="100" height="56" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="490.0" y="158.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">A^0 = {λ}</text>
+  <text x="490.0" y="175.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">0 cadenas</text>
+  <rect x="556" y="134" width="105" height="56" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="608.5" y="158.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">A^1 = A</text>
+  <text x="608.5" y="175.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">1 cadena</text>
+  <rect x="677" y="134" width="105" height="56" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="729.5" y="158.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">A^2 = AA</text>
+  <text x="729.5" y="175.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">2 cadenas</text>
+  <rect x="798" y="134" width="100" height="56" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="848.0" y="158.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">A^3, ...</text>
+  <text x="848.0" y="175.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">n cadenas</text>
+  <path d="M 560 205 L 560 218 L 895 218 L 895 205" fill="none" stroke="#204254" stroke-width="2"/>
+  <text x="727" y="238" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#204254">A+ = A^1 ∪ A^2 ∪ A^3 ∪ ...</text>
+  <path d="M 442 252 L 442 266 L 895 266 L 895 252" fill="none" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="668" y="288" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#B94A3E">A* = {λ} ∪ A+   (A* = A+ ⇔ λ ∈ A)</text>
+  <text x="668" y="312" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#4E606D">Reflexión: (AB)^R = B^R A^R</text>
+</svg>

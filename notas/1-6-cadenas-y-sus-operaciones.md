@@ -6,6 +6,8 @@ En los compiladores y procesadores de texto, las cadenas no solo se almacenan y 
 
 En esta sección se formalizan las operaciones fundamentales sobre $\Sigma^*$ siguiendo el tratamiento deductivo e inductivo de De Castro Korgi (2004, Secc. 1.2–1.6, pp. 7–10).
 
+![1.6 Cadenas y sus operaciones](../figuras/1-6-cadenas-y-sus-operaciones.svg)
+
 ## 1. Longitud de una cadena ($|w|$)
 
 ### Definición formal
@@ -38,10 +40,11 @@ Dadas dos cadenas $u, v \in \Sigma^*$, su **concatenación**, denotada por $u \c
 1. **Asociatividad:** Para cualesquiera $u, v, w \in \Sigma^*$, se cumple:
    $$(uv)w = u(vw).$$
    Esto permite omitir paréntesis en concatenaciones múltiples como $uvw$.
-2. **Elemento neutro (identidad):** La cadena vacía $\lambda$ es el único elemento neutro bilateral: $u\lambda = \lambda u = u$. En consecuencia, la terna $(\Sigma^*, \cdot, \lambda)$ conforma una estructura algebraica denominada **monoide libre** (Acevedo Juárez, 2006, p. 22).
+2. **Elemento neutro (identidad):** La cadena vacía $\lambda$ no altera a ninguna cadena al concatenarse, desempeñando un papel equivalente al del $0$ en la suma o el $1$ en la multiplicación: $u\lambda = \lambda u = u$. *(En matemáticas avanzadas, un conjunto con una operación asociativa y elemento neutro se llama monoide; por ello $(\Sigma^*, \cdot, \lambda)$ recibe el nombre de monoide libre, Acevedo Juárez, 2006, p. 22).*
 3. **No conmutatividad:** En general, si $|\Sigma| \ge 2$, existen cadenas tales que $uv \neq vu$ (por ejemplo, $ab \neq ba$).
 4. **Aditividad de la longitud:** Para cualesquiera $u, v \in \Sigma^*$,
    $$|uv| = |u| + |v|.$$
+   *(Nota metodológica: como toda cadena se construye empezando en $\lambda$ y añadiendo símbolos uno a uno, podemos demostrar propiedades generales sobre cadenas por **inducción sobre su longitud**: primero verificamos el caso base $v = \lambda$ y luego comprobamos qué ocurre al agregar un símbolo $a$ al final).*
    *Demostración por inducción sobre $|v|$:*
    - *Caso base ($v = \lambda$):* $|u\lambda| = |u| = |u| + 0 = |u| + |\lambda|$.
    - *Hipótesis de inducción:* Supóngase que $|uv| = |u| + |v|$ para cierta $v \in \Sigma^*$.
@@ -79,10 +82,10 @@ La **reflexión** (o **inversa**) de una cadena $w \in \Sigma^*$, denotada por $
 ### Teoremas y propiedades fundamentales
 
 1. **Invarianza de longitud:** $|w^R| = |w|$.
-2. **Involución:** $(w^R)^R = w$ para toda $w \in \Sigma^*$.
+2. **Doble reflexión (involución):** Invertir una cadena dos veces seguidas recupera la cadena original: $(w^R)^R = w$ para toda $w \in \Sigma^*$.
 3. **Reflexión de una concatenación:** Para cualesquiera $u, v \in \Sigma^*$,
    $$(uv)^R = v^R u^R.$$
-   *Demostración por inducción sobre $|v|$:*
+   *(Intuitivamente, si invertimos dos palabras pegadas, la segunda palabra aparece primero pero escrita al revés, seguida de la primera también al revés). Demostración por inducción sobre $|v|$ (probando primero $v = \lambda$ y luego al añadir un símbolo $a$):*
    - *Caso base ($v = \lambda$):* $(u\lambda)^R = u^R = \lambda u^R = \lambda^R u^R$.
    - *Hipótesis de inducción:* Supóngase $(uv)^R = v^R u^R$.
    - *Paso inductivo:* Sea $v' = va$ con $a \in \Sigma$. Entonces:

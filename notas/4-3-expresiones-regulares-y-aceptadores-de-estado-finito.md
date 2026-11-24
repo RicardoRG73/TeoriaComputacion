@@ -6,6 +6,8 @@ En el desarrollo de compiladores, editores de código, motores de búsqueda y va
 
 El vínculo matemático bidireccional que garantiza que **toda expresión regular puede compilarse en un autómata finito** y, recíprocamente, **todo autómata finito describe una expresión regular** es el célebre **Teorema de Kleene**, pieza central de la teoría de lenguajes regulares.
 
+![4.3 Expresiones regulares y aceptadores de estado finito](../figuras/4-3-expresiones-regulares-y-aceptadores-de-estado-finito.svg)
+
 ---
 
 ## 4.3.1 Lenguajes regulares y expresiones regulares
@@ -81,7 +83,7 @@ La demostración se divide en dos partes constructivas complementarias:
 
 ### Algoritmo de construcción de McNaughton–Yamada–Thompson
 
-Procedemos por inducción estructural sobre la definición de la expresión regular $r$. Para mantener una invariante limpia al componer subautómatas en serie, paralelo o lazo (evitando transiciones espurias cuando se anidan estrellas de Kleene), cada subautómata construido $M(r)$ posee:
+Procedemos construyendo el autómata paso a paso a partir de la estructura de la expresión regular $r$ (inducción sobre la complejidad de $r$): primero armamos mini-autómatas para los bloques básicos ($\emptyset$, $\lambda$ y $a$) y luego los conectamos con "cables" $\lambda$ para formar uniones, concatenaciones y estrellas. Para mantener una invariante limpia al componer subautómatas en serie, paralelo o lazo (evitando transiciones espurias cuando se anidan estrellas de Kleene), cada subautómata construido $M(r)$ posee:
 - Un **único estado inicial** sin transiciones entrantes.
 - Un **único estado final** sin transiciones salientes (distinto del inicial).
 
@@ -143,7 +145,7 @@ flowchart LR
     end
 ```
 
-Por inducción estructural, en cada caso una trayectoria desde el estado inicial hasta el único estado final consume exactamente una cadena perteneciente a $L(r) \cup L(s)$, $L(r)L(s)$ o $(L(r))^*$, respectivamente. $\blacksquare$
+Así, siguiendo paso a paso la construcción de los bloques básicos hacia las expresiones compuestas, en cada caso una trayectoria desde el estado inicial hasta el único estado final consume exactamente una cadena perteneciente a $L(r) \cup L(s)$, $L(r)L(s)$ o $(L(r))^*$, respectivamente. $\blacksquare$
 
 ---
 
@@ -162,7 +164,11 @@ Para obtener una expresión regular a partir de un autómata finito dado existen
 
 *(Si $\lambda \in A$, la ecuación deja de tener solución única: toda expresión de la forma $X = A^*(B \cup D)$ con $D \subseteq \Sigma^*$ es solución).*
 
-#### Demostración del Lema de Arden
+#### Idea intuitiva y demostración del Lema de Arden
+
+Antes de la prueba formal, resulta muy útil sustituir la ecuación $X = AX + B$ dentro de sí misma varias veces:
+$$X = AX + B = A(AX + B) + B = A^2 X + AB + B = A^3 X + A^2 B + AB + B = \dots$$
+Al repetir este reemplazo indefinidamente, aparecen todas las potencias $(\lambda + A + A^2 + A^3 + \dots)B = A^* B$. La condición $\lambda \notin A$ garantiza que cada $A$ adicional aporte al menos un símbolo más de longitud, de modo que no puedan colarse cadenas "fantasma" en $X$ que no provengan de $A^* B$.
 
 1. **Verificación de que $A^* B$ es solución:** Usando las propiedades de la estrella de Kleene,
    $$A(A^* B) \cup B = A^+ B \cup B = (A^+ \cup \{\lambda\}) B = A^* B.$$

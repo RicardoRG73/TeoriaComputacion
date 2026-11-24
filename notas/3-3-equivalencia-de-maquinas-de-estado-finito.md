@@ -9,6 +9,8 @@ En este subtema se aborda la noción de equivalencia desde sus dos vertientes co
 1. **Equivalencia de comportamiento entrada-salida en máquinas con salida** (Mealy y Moore), extendiendo formalmente las funciones $\delta$ y $\omega$ a cadenas arbitrarias $w \in \Sigma^*$.
 2. **Equivalencia computacional entre aceptadores** (AFD, AFN y AFN-$\lambda$), demostrando mediante la construcción de subconjuntos y la $\lambda$-clausura que el no determinismo y las transiciones $\lambda$ no aumentan el conjunto de lenguajes reconocibles (De Castro Korgi, 2004, Secc. 2.5–2.7; Acevedo Juárez, 2006, Secc. 2.2).
 
+![3.3 Equivalencia de máquinas de estado finito](../figuras/3-3-equivalencia-de-maquinas-de-estado-finito.svg)
+
 ## Extensión de $\hat{\delta}$ y $\hat{\omega}$ a cadenas $w \in \Sigma^*$
 
 Hasta ahora $\delta$ y $\omega$ se definieron para un único símbolo de entrada $a \in \Sigma$. Para describir el procesamiento completo de cualquier cadena $w \in \Sigma^*$, extendemos recursivamente ambas funciones (De Castro Korgi, 2004, Def. 2.5.2, donde la función extendida se denota $\dot{\delta}$).

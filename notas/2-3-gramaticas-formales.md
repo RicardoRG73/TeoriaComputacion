@@ -6,6 +6,8 @@ Una vez identificados los ingredientes intuitivos de una gramática (variables, 
 
 Esta formalización permite demostrar rigurosamente que una gramática genera un lenguaje específico —mediante pruebas de corrección y completitud por inducción— y establecer cuándo dos gramáticas sintácticamente distintas son equivalentes.
 
+![2.3 Gramáticas formales](../figuras/2-3-gramaticas-formales.svg)
+
 ## Definición formal de gramática generativa
 
 ### Definición 2.3.1 (Gramática formal)
@@ -48,8 +50,8 @@ Sea $G = (V, \Sigma, P, S)$ una gramática formal y sean $\gamma, \delta \in (V 
   - Para $k = 0$: $\gamma \Rightarrow_G^0 \gamma$ para toda cadena $\gamma \in (V \cup \Sigma)^*$.
   - Para $k \ge 1$: $\gamma \Rightarrow_G^k \delta$ si existen cadenas $\gamma_0, \gamma_1, \dots, \gamma_k \in (V \cup \Sigma)^*$ tales que $\gamma_0 = \gamma$, $\gamma_k = \delta$ y:
     $$\gamma_0 \Rightarrow_G \gamma_1 \Rightarrow_G \gamma_2 \Rightarrow_G \cdots \Rightarrow_G \gamma_{k-1} \Rightarrow_G \gamma_k$$
-- **Clausura reflexiva y transitiva ($\Rightarrow_G^*$):** Se dice que $\delta$ **se deriva** de $\gamma$ (en cero o más pasos) si existe algún entero $k \ge 0$ tal que $\gamma \Rightarrow_G^k \delta$.
-- **Clausura transitiva ($\Rightarrow_G^+$):** Se dice que $\delta$ se deriva de $\gamma$ en **uno o más pasos** si existe algún entero $k \ge 1$ tal que $\gamma \Rightarrow_G^k \delta$.
+- **Derivación en cero o más pasos ($\Rightarrow_G^*$, llamada *clausura reflexiva y transitiva*):** Se dice que $\delta$ **se deriva** de $\gamma$ (aplicando cero, una o varias reglas consecutivas) si existe algún entero $k \ge 0$ tal que $\gamma \Rightarrow_G^k \delta$.
+- **Derivación en uno o más pasos ($\Rightarrow_G^+$, llamada *clausura transitiva*):** Se dice que $\delta$ se deriva de $\gamma$ en **al menos un paso** si existe algún entero $k \ge 1$ tal que $\gamma \Rightarrow_G^k \delta$.
 
 ```mermaid
 flowchart LR
@@ -91,10 +93,10 @@ flowchart TD
 
 ## Metodología de prueba: corrección y completitud
 
-Para demostrar formalmente que una gramática $G$ genera un lenguaje objetivo $L$ (es decir, probar la igualdad de conjuntos $L(G) = L$), deben probarse dos inclusiones (Acevedo Juárez, 2006, p. 88; De Castro Korgi, 2004, pp. 86–87):
+Para demostrar formalmente que una gramática $G$ genera exactamente un lenguaje objetivo $L$ (es decir, probar la igualdad de conjuntos $L(G) = L$), deben comprobarse dos ideas complementarias —como verificar que una receta no produce platos equivocados y que tampoco deja fuera ningún plato del menú— (Acevedo Juárez, 2006, p. 88; De Castro Korgi, 2004, pp. 86–87):
 
-1. **Corrección ($L(G) \subseteq L$):** Demostrar que toda cadena $w \in \Sigma^*$ derivable desde $S$ satisface la propiedad que define a $L$. Suele probarse por inducción matemática sobre el número de pasos $k$ de la derivación $S \Rightarrow_G^k w$, formulando primero un invariante sobre todas las formas sentenciales alcanzables.
-2. **Completitud ($L \subseteq L(G)$):** Demostrar que toda cadena $w \in L$ admite al menos una derivación $S \Rightarrow_G^* w$ en $G$. Suele probarse por inducción sobre la longitud $|w|$ o sobre los parámetros enteros que definen a $L$.
+1. **Corrección ($L(G) \subseteq L$, "no genera intrusos"):** Demostrar que toda cadena $w \in \Sigma^*$ derivable desde $S$ cumple la condición que define a $L$. Suele probarse por inducción matemática sobre el número de pasos $k$ de la derivación $S \Rightarrow_G^k w$, observando qué patrón conservan las cadenas intermedias.
+2. **Completitud ($L \subseteq L(G)$, "no olvida ninguna cadena válida"):** Demostrar que toda cadena $w \in L$ admite al menos una derivación $S \Rightarrow_G^* w$ en $G$. Suele probarse por inducción sobre la longitud $|w|$ o sobre los exponentes que definen a $L$.
 
 ## Ejemplos desarrollados paso a paso
 

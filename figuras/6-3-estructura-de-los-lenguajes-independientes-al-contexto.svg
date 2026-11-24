@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="6.3 Lema de bombeo para LIC: árbol binario en FNC y bombeo z = uvwxy">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">6.3 Lema de bombeo para LIC: árbol binario en FNC y bombeo z = uvwxy</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">En un árbol suficientemente alto (&gt; |V|+2), una variable A se repite generando uvⁱwxⁱy ∈ L</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<circle cx="255" cy="98" r="20" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="255" y="103" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="115" cy="175" r="18" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="115" cy="175" r="13" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="115" y="180" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">u</text>
+  <circle cx="255" cy="175" r="22" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="255" y="173" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">A</text>
+  <text x="255" y="189" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">1.ª vez</text>
+  <circle cx="395" cy="175" r="18" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="395" cy="175" r="13" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="395" y="180" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">y</text>
+  <circle cx="175" cy="255" r="18" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="175" cy="255" r="13" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="175" y="260" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">v</text>
+  <circle cx="255" cy="255" r="22" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="255" y="253" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">A</text>
+  <text x="255" y="269" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">2.ª vez</text>
+  <circle cx="335" cy="255" r="18" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="335" cy="255" r="13" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="335" y="260" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">x</text>
+  <circle cx="255" cy="322" r="18" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="255" cy="322" r="13" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="255" y="327" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">w</text>
+  <line x1="238" y1="108" x2="131" y2="164" stroke="#204254" stroke-width="2"/>
+  <line x1="255" y1="118" x2="255" y2="152" stroke="#B94A3E" stroke-width="2.2"/>
+  <line x1="272" y1="108" x2="379" y2="164" stroke="#204254" stroke-width="2"/>
+  <line x1="240" y1="191" x2="190" y2="242" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="255" y1="197" x2="255" y2="232" stroke="#B94A3E" stroke-width="2.2"/>
+  <line x1="270" y1="191" x2="320" y2="242" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="255" y1="277" x2="255" y2="304" stroke="#204254" stroke-width="2"/>
+  <rect x="465" y="92" width="455" height="108" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="692.5" y="126.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Condiciones del bombeo (|z| &gt; n = 2^|V|)</text>
+  <text x="692.5" y="143.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">1. |vwx| ≤ n    (subárbol superior acotado)</text>
+  <text x="692.5" y="160.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">2. |vx| ≥ 1      (v o x no vacía)</text>
+  <text x="692.5" y="177.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">3. uvⁱwxⁱy ∈ L   para todo i ≥ 0</text>
+  <rect x="465" y="214" width="455" height="108" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="692.5" y="256.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">No son LIC (contraejemplos clásicos)</text>
+  <text x="692.5" y="273.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">• {aⁿbⁿcⁿ}  • {ww | w ∈ {a,b}*}  • {aⁱbʲcᵏ | i ≤ j ≤ k}</text>
+  <text x="692.5" y="290.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Además, los LIC NO son cerrados bajo ∩ ni complemento</text>
+</svg>

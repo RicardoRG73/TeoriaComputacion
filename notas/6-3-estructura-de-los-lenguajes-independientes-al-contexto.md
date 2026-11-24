@@ -4,6 +4,8 @@ El estudio de las formas normales permite responder preguntas profundas acerca d
 
 Esta sección aborda tres pilares teóricos de la clase de los LIC (De Castro Korgi, 2004, Secc. 4.13–4.15): el **Lema de bombeo**, las **propiedades de clausura** y los **algoritmos de decisión**.
 
+![6.3 Estructura de los lenguajes independientes al contexto](../figuras/6-3-estructura-de-los-lenguajes-independientes-al-contexto.svg)
+
 ---
 
 ## 6.3.1 Lema de bombeo para lenguajes independientes del contexto
@@ -14,7 +16,7 @@ Al igual que existe un lema de bombeo para lenguajes regulares basado en la repe
 
 Sea $G = (V, \Sigma, P, S)$ una gramática en FNC (con variable inicial no recursiva). El árbol de derivación de cualquier cadena $w \in \Sigma^+$ es un árbol binario (salvo los nodos pre-terminales que tienen un único hijo terminal).
 
-**Lema previo (Cota de longitud por profundidad; De Castro Korgi, 2004, Teorema 4.13.1 y Corolario 4.13.2).** Si la trayectoria más larga desde la raíz hasta una hoja en un árbol de derivación de $S \Rightarrow_G^* w$ ($w \in \Sigma^+$) tiene como máximo $k + 2$ nodos ($k \ge 0$), entonces $|w| \le 2^k$. Contrarrecíprocamente, si $|w| > 2^k$, la trayectoria más larga contiene al menos $k + 3$ nodos (es decir, al menos $k + 2$ nodos etiquetados con variables antes de alcanzar la hoja terminal).
+**Lema previo (Cota de longitud por profundidad; De Castro Korgi, 2004, Teorema 4.13.1 y Corolario 4.13.2).** Si la trayectoria más larga desde la raíz hasta una hoja en un árbol de derivación de $S \Rightarrow_G^* w$ ($w \in \Sigma^+$) tiene como máximo $k + 2$ nodos ($k \ge 0$), entonces $|w| \le 2^k$. Dicho a la inversa (*contrarrecíprocamente*), si la cadena es muy larga ($|w| > 2^k$), el árbol tiene que ser suficientemente alto: la trayectoria más larga contendrá al menos $k + 3$ nodos (es decir, al menos $k + 2$ nodos etiquetados con variables antes de alcanzar la hoja terminal).
 
 *Esquema inductivo:* Para $k = 0$ (trayectoria de $2$ nodos: $S \to a$), $|w| = 1 = 2^0$. Si la raíz se ramifica en dos subárboles cuyas trayectorias más largas tienen a lo sumo $(k - 1) + 2$ nodos, cada subárbol genera a lo sumo $2^{k-1}$ hojas terminales, dando en total $|w| \le 2^{k-1} + 2^{k-1} = 2^k$.
 
@@ -27,7 +29,7 @@ Sea $G = (V, \Sigma, P, S)$ una gramática en FNC (con variable inicial no recur
 
 *(Nota de notación: tomando $n' = n + 1$, el enunciado equivale exactamente a exigir $|z| \ge n'$ en lugar de $|z| > n$, con la misma cota $|vwx| \le n'$).*
 
-*Demostración.* Si $L$ es finito o $L \subseteq \{\lambda\}$, basta elegir $n$ igual a la longitud máxima de las cadenas de $L$ (o $n = 1$), cumpliéndose la implicación por vacuidad. Supongamos que $L$ contiene cadenas no vacías arbitrariamente largas. Por los teoremas de la Sección 6.2.1, existe una gramática en FNC $G = (V, \Sigma, P, S)$ con variable inicial no recursiva tal que $L(G) = L$ (y $S \to \lambda$ no interviene en derivaciones de cadenas no vacías).
+*Demostración.* Si $L$ es finito o $L \subseteq \{\lambda\}$, basta elegir $n$ igual a la longitud máxima de las cadenas de $L$ (o $n = 1$); en ese caso la propiedad se cumple de forma automática (*por vacuidad*), porque no existe ninguna cadena en $L$ con longitud mayor que $n$. Supongamos que $L$ contiene cadenas no vacías arbitrariamente largas. Por los teoremas de la Sección 6.2.1, existe una gramática en FNC $G = (V, \Sigma, P, S)$ con variable inicial no recursiva tal que $L(G) = L$ (y $S \to \lambda$ no interviene en derivaciones de cadenas no vacías).
 
 Sea $k = |V|$ el número de variables de $G$ y elijamos la constante $n = 2^k$. Tomemos cualquier cadena $z \in L$ con $|z| > n = 2^k$, y consideremos un árbol de derivación para $S \Rightarrow_G^* z$.
 
@@ -214,7 +216,7 @@ Un **problema de decisión** para una propiedad $\mathcal{P}$ de GIC plantea si 
 
 ### Problemas indecidibles
 
-Existen preguntas fundamentales sobre las GIC para las cuales **no existe algoritmo general alguno** (son problemas **indecidibles**, demostrables típicamente mediante reducción desde el Problema de Correspondencia de Post o desde el problema de parada de máquinas de Turing; De Castro Korgi, 2004, p. 140):
+Existen preguntas fundamentales sobre las GIC que son **indecidibles**, es decir, para las cuales **ningún programa o algoritmo general puede dar siempre la respuesta correcta en tiempo finito** (en cursos avanzados de computabilidad se demuestra esto reduciéndolas a problemas imposibles clásicos como saber si un programa arbitrario se detiene o el Problema de Correspondencia de Post; De Castro Korgi, 2004, p. 140):
 
 1. **Problema de la ambigüedad:** *Dada una GIC $G$, ¿es $G$ ambigua?* (Indecidible; incluso cuando se sabe que el lenguaje es no ambiguo).
 2. **Problema de la universalidad (totalidad):** *Dada una GIC $G$, ¿genera todas las cadenas posibles sobre su alfabeto, es decir, $L(G) = \Sigma^*$?* (Indecidible).

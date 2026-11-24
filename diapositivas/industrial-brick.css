@@ -1,0 +1,438 @@
+/* @theme industrial-brick */
+@import 'default';
+
+:root {
+  /* Colores base de la imagen Industrial Brick */
+  --brick-red: #B94A3E;
+  --brick-light: #E87466;
+  --brick-dark: #93362C;
+  --steel-blue: #204254;
+  --steel-mid: #2C5870;
+  --steel-soft: #EEF3F6;
+  --charcoal-ink: #121B22;
+
+  /* Tema Claro (predeterminado) */
+  --bg-light: #FAF8F5;
+  --bg-card-light: #FFFFFF;
+  --bg-surface-light: #F3F6F8;
+  --bg-callout-light: #FDF4F2;
+  --border-light: #D5DEE4;
+  --border-warm: #E7C5C0;
+  --text-light-muted: #4D5F6C;
+
+  /* Diapositivas Oscuras (lead / invert / dark) */
+  --bg-dark: #121B22;
+  --bg-dark-surface: #1A2833;
+  --text-on-dark: #FAF8F5;
+  --text-dark-muted: #C2D0DA;
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  padding: 58px 66px 52px 66px;
+  background-color: var(--bg-light);
+  background-image: linear-gradient(
+    90deg,
+    var(--brick-red) 0%,
+    var(--steel-blue) 62%,
+    var(--charcoal-ink) 100%
+  );
+  background-size: 100% 7px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  color: var(--charcoal-ink);
+  font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.48;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+header,
+footer {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-light-muted);
+}
+
+header {
+  top: 18px;
+  left: 66px;
+  right: 66px;
+}
+
+footer {
+  bottom: 16px;
+  left: 66px;
+  right: 110px;
+}
+
+section::after {
+  bottom: 15px;
+  right: 66px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brick-red);
+}
+
+/* Encabezados en tema claro */
+h1 {
+  font-size: 1.68em;
+  line-height: 1.18;
+  color: var(--charcoal-ink);
+  margin: 0 0 18px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--brick-red);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.24em;
+  color: var(--steel-blue);
+  margin: 12px 0 10px 0;
+  padding-left: 12px;
+  border-left: 5px solid var(--brick-red);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.04em;
+  color: var(--brick-red);
+  margin: 10px 0 6px 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 12px 0;
+}
+
+strong {
+  color: var(--charcoal-ink);
+  font-weight: 700;
+}
+
+em {
+  color: var(--steel-blue);
+}
+
+a {
+  color: var(--brick-red);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--brick-red);
+}
+
+ul,
+ol {
+  margin: 6px 0 12px 0;
+  padding-left: 28px;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+li::marker {
+  color: var(--brick-red);
+  font-weight: 700;
+}
+
+/* Citas / Teoremas / Notas destacadas en tema claro */
+blockquote {
+  margin: 12px 0;
+  padding: 13px 18px;
+  background-color: var(--bg-callout-light);
+  border: 1px solid var(--border-warm);
+  border-left: 6px solid var(--brick-red);
+  border-radius: 0 8px 8px 0;
+  color: var(--charcoal-ink);
+  font-size: 0.94em;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Código */
+code {
+  font-family: "Cascadia Code", "Consolas", "Fira Code", monospace;
+  font-size: 0.86em;
+  background-color: #F6ECEA;
+  color: var(--brick-dark);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-warm);
+}
+
+pre {
+  background-color: var(--bg-surface-light);
+  border: 1px solid var(--border-light);
+  border-left: 5px solid var(--steel-blue);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  font-size: 0.82em;
+  line-height: 1.42;
+}
+
+pre code {
+  background: transparent;
+  color: var(--charcoal-ink);
+  border: none;
+  padding: 0;
+}
+
+/* Tablas en tema claro */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 12px 0;
+  font-size: 0.83em;
+  background-color: var(--bg-card-light);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead tr {
+  background-color: var(--steel-blue);
+  color: #FFFFFF;
+}
+
+th {
+  padding: 8px 12px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 3px solid var(--brick-red);
+}
+
+td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+}
+
+td:last-child,
+th:last-child {
+  border-right: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-surface-light);
+}
+
+/* Utilidades de diseño 16:9 */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background-color: var(--bg-card-light);
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--steel-blue);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--brick-red);
+  color: #FFFFFF;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   DIAPOSITIVAS EN FORMATO OSCURO (Portadas y Énfasis de Conceptos Clave)
+   Uso: <!-- _class: lead -->  o  <!-- _class: invert -->  o  <!-- _class: dark -->
+   ========================================================================== */
+
+section.lead {
+  justify-content: center;
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(
+    135deg,
+    #121B22 0%,
+    #204254 64%,
+    #B94A3E 100%
+  );
+  background-size: 100% 100%;
+  color: var(--text-on-dark);
+  padding: 72px 84px;
+}
+
+section.lead h1 {
+  font-size: 2.25em;
+  color: #FFFFFF;
+  border-bottom: 4px solid var(--brick-light);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+section.lead h2 {
+  color: #F6C5BE;
+  border-left-color: var(--brick-light);
+  font-size: 1.25em;
+}
+
+section.lead p,
+section.lead li {
+  color: var(--text-dark-muted);
+  font-size: 1.04em;
+}
+
+section.lead strong {
+  color: #FFFFFF;
+}
+
+section.lead header,
+section.lead footer,
+section.lead::after {
+  color: rgba(250, 248, 245, 0.72);
+}
+
+/* Diapositiva oscura de énfasis para teoremas, definiciones y conclusiones clave */
+section.invert,
+section.dark {
+  background-color: var(--bg-dark);
+  background-image:
+    linear-gradient(90deg, var(--brick-red) 0%, var(--steel-blue) 100%),
+    radial-gradient(circle at 92% 14%, rgba(185, 74, 62, 0.22), transparent 45%);
+  background-size: 100% 7px, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top left, center center;
+  color: var(--text-on-dark);
+}
+
+section.invert header,
+section.invert footer,
+section.dark header,
+section.dark footer {
+  color: rgba(194, 208, 218, 0.78);
+}
+
+section.invert::after,
+section.dark::after {
+  color: var(--brick-light);
+}
+
+section.invert h1,
+section.dark h1 {
+  color: #FFFFFF;
+  border-bottom-color: var(--brick-red);
+}
+
+section.invert h2,
+section.dark h2 {
+  color: var(--brick-light);
+  border-left-color: var(--brick-red);
+}
+
+section.invert h3,
+section.dark h3 {
+  color: #F5A399;
+}
+
+section.invert strong,
+section.dark strong {
+  color: #FFFFFF;
+}
+
+section.invert em,
+section.dark em {
+  color: #9DC1D4;
+}
+
+section.invert li::marker,
+section.dark li::marker {
+  color: var(--brick-light);
+}
+
+section.invert blockquote,
+section.dark blockquote {
+  background-color: rgba(32, 66, 84, 0.58);
+  border: 1px solid rgba(185, 74, 62, 0.55);
+  border-left: 6px solid var(--brick-red);
+  color: #FAF8F5;
+}
+
+section.invert code,
+section.dark code {
+  background-color: #243644;
+  color: #FAD2CD;
+  border-color: rgba(232, 116, 102, 0.35);
+}
+
+section.invert pre,
+section.dark pre {
+  background-color: var(--bg-dark-surface);
+  border-color: var(--steel-mid);
+  border-left-color: var(--brick-red);
+}
+
+section.invert pre code,
+section.dark pre code {
+  color: #FAF8F5;
+}
+
+section.invert table,
+section.dark table {
+  background-color: var(--bg-dark-surface);
+  border-color: var(--steel-mid);
+  color: #FAF8F5;
+}
+
+section.invert thead tr,
+section.dark thead tr {
+  background-color: var(--brick-red);
+}
+
+section.invert th,
+section.dark th {
+  border-bottom-color: var(--steel-blue);
+}
+
+section.invert td,
+section.dark td {
+  border-color: rgba(213, 222, 228, 0.16);
+}
+
+section.invert tbody tr:nth-child(even),
+section.dark tbody tr:nth-child(even) {
+  background-color: rgba(32, 66, 84, 0.35);
+}
+
+section.invert .card,
+section.dark .card {
+  background-color: var(--bg-dark-surface);
+  border-color: var(--steel-mid);
+  border-top-color: var(--brick-red);
+}
+
+/* KaTeX en modo oscuro y claro */
+.katex {
+  font-size: 1.02em;
+}
+
+/* Figuras vectoriales en diapositivas */
+section img {
+  display: block;
+  max-width: 100%;
+  max-height: 465px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+section img[alt~="center"] {
+  margin-left: auto;
+  margin-right: auto;
+}

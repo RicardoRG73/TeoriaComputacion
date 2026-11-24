@@ -68,6 +68,8 @@ flowchart TD
 
 Como demuestra De Castro Korgi (2004, Secc. 6.7, pp. 188–193), agregar una **segunda pila** a un autómata *pushdown* (modelo **AF2P**) permite simular una cinta bidireccional de lectura/escritura: la primera pila almacena la porción de cinta a la izquierda del cabezal y la segunda pila almacena la porción bajo el cabezal y a su derecha. En consecuencia, un autómata con dos pilas alcanza ya el poder computacional máximo de una Máquina de Turing. Con **una sola pila**, en cambio, el autómata permanece estrictamente confinado al ámbito de los lenguajes independientes del contexto: puede verificar correspondencias anidadas (LIFO), pero no puede comparar de manera independiente tres conteos cruzados como $\{a^n b^n c^n : n \ge 1\}$ ni copias directas $\{w w : w \in \{a,b\}^*\}$.
 
+![5.1 Introducción](../figuras/5-1-introduccion.svg)
+
 ---
 
 ## Ejemplos paso a paso

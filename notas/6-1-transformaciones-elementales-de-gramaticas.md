@@ -4,6 +4,8 @@ Una gramática independiente del contexto (GIC) $G = (V, \Sigma, P, S)$ puede di
 
 Las **transformaciones elementales** son procedimientos algorítmicos que modifican el conjunto de variables $V$ y el conjunto de producciones $P$ preservando el lenguaje generado. Su propósito es depurar una gramática hasta transformarla en una **gramática bien formada**, punto de partida indispensable para obtener formas normales canónicas (De Castro Korgi, 2004; Acevedo Juárez, 2006).
 
+![6.1 Transformaciones elementales de gramáticas](../figuras/6-1-transformaciones-elementales-de-gramaticas.svg)
+
 ---
 
 ## 6.1.1 Equivalencia de gramáticas
@@ -23,7 +25,7 @@ Sean $G_1 = (V_1, \Sigma_1, P_1, S_1)$ y $G_2 = (V_2, \Sigma_2, P_2, S_2)$ dos g
 
 ### Explicación intuitiva y propiedades
 
-La relación $\equiv$ sobre el conjunto de todas las GIC es una **relación de equivalencia** (reflexiva, simétrica y transitiva). Dos gramáticas equivalentes pueden tener conjuntos de variables por completo distintos, diferente número de producciones e incluso generar árboles de derivación estructuralmente diferentes para la misma cadena (lo que se conoce como **equivalencia débil**, frente a la equivalencia fuerte basada en isomorfismo de árboles).
+La relación $\equiv$ sobre el conjunto de todas las GIC es una **relación de equivalencia** (reflexiva, simétrica y transitiva). Dos gramáticas equivalentes pueden tener conjuntos de variables por completo distintos, diferente número de producciones e incluso generar árboles de derivación con forma diferente para la misma cadena (lo que se conoce como **equivalencia débil**, frente a la equivalencia fuerte donde los árboles tienen exactamente la misma estructura o forma).
 
 La noción de **equivalencia salvo $\lambda$** adquiere importancia central al estudiar transformaciones hacia formas normales (Sección 6.2). Como las producciones en Forma Normal de Chomsky o de Greibach nunca tienen $\lambda$ en su lado derecho (salvo en la extensión que añade explícitamente $S' \to \lambda$), cualquier algoritmo que elimine por completo las producciones-$\lambda$ transforma $G$ en una gramática $G'$ equivalente salvo $\lambda$. Si $\lambda \in L(G)$ y se requiere equivalencia estricta, basta introducir una nueva variable inicial $S'$ con las producciones $S' \to S \mid \lambda$.
 
@@ -71,7 +73,7 @@ Cuando una variable $A$ posee múltiples alternativas que comparten un mismo pre
 $$A \to \alpha \beta_1 \mid \alpha \beta_2 \mid \dots \mid \alpha \beta_k \mid \gamma_1 \mid \dots \mid \gamma_m$$
 (donde ninguna $\gamma_j$ inicia con $\alpha$), la **factorización por la izquierda** consiste en extraer el prefijo común $\alpha$ introduciendo una nueva variable $A' \notin V$:
 $$A \to \alpha A' \mid \gamma_1 \mid \dots \mid \gamma_m, \qquad A' \to \beta_1 \mid \beta_2 \mid \dots \mid \beta_k.$$
-Sustituyendo $A'$ en $A \to \alpha A'$ por el teorema de substitución se recuperan exactamente las producciones originales, lo que prueba que la equivalencia se conserva. En ingeniería de compiladores, la factorización izquierda elimina el no determinismo de prefijo en analizadores sintácticos descendentes predictivos (tipo LL).
+Sustituyendo $A'$ en $A \to \alpha A'$ por el teorema de substitución se recuperan exactamente las producciones originales, lo que prueba que la equivalencia se conserva. En la construcción de compiladores, la factorización izquierda evita que un analizador descendente predictivo (que elige la regla mirando el siguiente símbolo de la entrada) dude entre varias reglas que empiezan igual.
 
 ### Ejemplo 2: Substitución, expansión y factorización izquierda
 

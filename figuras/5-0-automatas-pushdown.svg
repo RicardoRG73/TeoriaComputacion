@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="Unidad 5 · Autómatas Pushdown (AP) y Lenguajes Independientes del Contexto">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">Unidad 5 · Autómatas Pushdown (AP) y Lenguajes Independientes del Contexto</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Al añadir una pila LIFO al control finito, el modelo no determinista iguala a las GIC</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="45" y="92" width="250" height="74" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="170.0" y="125.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">5.1–5.2 Modelo Pushdown</text>
+  <text x="170.0" y="142.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Cinta + Pila LIFO (AFPD vs. AFPN)</text>
+  <rect x="345" y="92" width="260" height="74" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="475.0" y="125.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">5.3 Propios y sin ciclos</text>
+  <text x="475.0" y="142.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Evitar bucles-λ vía FNG</text>
+  <rect x="655" y="92" width="265" height="74" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="787.5" y="125.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">5.4–5.5 GIC ⇔ AFPN</text>
+  <text x="787.5" y="142.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">3 estados ↔ Variables triples</text>
+  <line x1="295" y1="129" x2="341" y2="129" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <line x1="605" y1="129" x2="651" y2="129" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="95" y="208" width="770" height="108" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="480.0" y="258.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">Separación estricta de clases (5.6 Ambigüedad y determinismo)</text>
+  <text x="480.0" y="275.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Regulares (L₃)  ⊊  L(AFPD)  ⊊  LIC No Ambiguos  ⊊  L(AFPN) = LIC (Tipo 2)</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="5.3 Eliminación de estados improductivos y bucles-λ (Aceptador sin ciclos)">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">5.3 Eliminación de estados improductivos y bucles-λ (Aceptador sin ciclos)</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Conversión constructiva vía gramática bien formada y Forma Normal de Greibach</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="86" width="360" height="240" rx="10" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="218" y="112" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#B94A3E">AP arbitrario (con anomalías)</text>
+  <line x1="44" y1="185" x2="75" y2="185" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="100" cy="185" r="22" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="100" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q0</text>
+  <circle cx="215" cy="185" r="22" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="215" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q1</text>
+  <circle cx="340" cy="145" r="20" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="340" cy="145" r="15" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="340" y="150" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q2</text>
+  <circle cx="340" cy="240" r="20" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="340" y="238" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">q4</text>
+  <text x="340" y="254" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">muerto</text>
+  <line x1="122" y1="185" x2="190" y2="185" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="146.6" y="165.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="156.0" y="177.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">a</text>
+  <line x1="235" y1="174" x2="318" y2="148" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="267.1" y="141.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="276.5" y="153.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">b</text>
+  <line x1="235" y1="196" x2="318" y2="232" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="267.1" y="194.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="276.5" y="206.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">c</text>
+  <path d="M 203 163 Q 215 122 227 163" fill="none" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="145.4" y="116" width="139.2" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="215" y="128" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">λ, A / AA (bucle ∞)</text>
+  <text x="218" y="304" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#93362C">Riesgo: ciclo infinito sin leer cinta</text>
+  <line x1="404" y1="206" x2="474" y2="206" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="422.8" y="186.0" width="32.4" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="439.0" y="198.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">FNG</text>
+  <rect x="480" y="86" width="442" height="240" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="2"/>
+  <text x="701" y="112" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#204254">AP propio y sin ciclos (tiempo real)</text>
+  <rect x="508" y="142" width="386" height="56" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="701.0" y="166.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Reglas FNG: A → aα  (a ∈ Σ, α ∈ V*)</text>
+  <text x="701.0" y="183.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Cada transición consume 1 terminal de la entrada</text>
+  <rect x="508" y="214" width="386" height="90" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="701.0" y="239.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">Terminación garantizada</text>
+  <text x="701.0" y="256.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">• Sin estados inalcanzables ni muertos</text>
+  <text x="701.0" y="273.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">• Toda cadena w de longitud n termina en n pasos</text>
+  <text x="701.0" y="290.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">• Pertinencia w ∈ L(M) siempre decidible</text>
+</svg>

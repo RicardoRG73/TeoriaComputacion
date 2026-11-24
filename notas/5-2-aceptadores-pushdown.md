@@ -4,6 +4,8 @@ En el análisis sintáctico de compiladores y en la caracterización operacional
 
 > **Nota sobre notación:** En la literatura clásica (p. ej., Hopcroft et al., 2007; Acevedo Juárez, 2006) la 7-tupla de un autómata con pila suele ordenarse como $M = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$ (o $(Q, \Sigma, Z, s, z, F, \delta)$ usando $\#$ para el fondo y $e$ o $\varepsilon$ para la cadena vacía). En estas notas adoptamos de manera consistente la notación del texto principal de De Castro Korgi (2004, Secc. 5.1–5.3, pp. 143–156): $M = (Q, q_0, F, \Sigma, \Gamma, z_0, \Delta)$, $\lambda$ para la cadena vacía y $z_0$ para el marcador de fondo de pila.
 
+![5.2 Aceptadores "pushdown"](../figuras/5-2-aceptadores-pushdown.svg)
+
 ---
 
 ## Definición formal: AFPD y AFPN
@@ -76,7 +78,7 @@ $$(q, au, A\beta) \vdash_M (p, u, \gamma\beta).$$
 Cuando el autómata es claro por el contexto, se escribe simplemente $\vdash$. Denotamos mediante:
 - $\vdash_M^k$ la aplicación de exactamente $k \ge 0$ pasos computacionales,
 - $\vdash_M^+$ uno o más pasos computacionales, y
-- $\vdash_M^*$ cero, uno o más pasos (clausura reflexiva y transitiva de $\vdash_M$).
+- $\vdash_M^*$ cero, uno o más pasos consecutivos (llamada en lógica y conjuntos *clausura reflexiva y transitiva* de $\vdash_M$).
 
 > **Restricción fundamental del tope:** Según la definición de $\Delta$, toda transición exige leer al menos un símbolo $A \in \Gamma$ en el tope de la pila. En cuanto la pila queda completamente vacía ($\alpha = \lambda$), ninguna transición adicional es posible y el cómputo se detiene.
 

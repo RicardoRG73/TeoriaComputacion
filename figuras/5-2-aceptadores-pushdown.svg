@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="5.2 Paso computacional (q, au, Aβ) ⊢ (p, u, γβ) y jerarquía AFPD ⊊ AFPN">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">5.2 Paso computacional (q, au, Aβ) ⊢ (p, u, γβ) y jerarquía AFPD ⊊ AFPN</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Operaciones en el tope de la pila y diferencia entre aceptación determinista y no determinista</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="84" width="470" height="246" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="273" y="110" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#204254">Efecto de (p, γ) ∈ Δ(q, a, A) sobre la pila</text>
+  <rect x="60" y="132" width="130" height="50" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="125.0" y="153.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">γ = λ</text>
+  <text x="125.0" y="170.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Desapila (pop A)</text>
+  <rect x="208" y="132" width="130" height="50" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="273.0" y="153.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">γ = A</text>
+  <text x="273.0" y="170.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Preserva el tope</text>
+  <rect x="356" y="132" width="130" height="50" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="421.0" y="153.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">γ = BA</text>
+  <text x="421.0" y="170.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Apila B sobre A</text>
+  <rect x="62" y="208" width="422" height="102" rx="9" fill="#FFFFFF" stroke="#CBD6DE" stroke-width="2"/>
+  <text x="273.0" y="239.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Dos criterios equivalentes en AFPN:</text>
+  <text x="273.0" y="256.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">• Estado final L(M): termina en p ∈ F</text>
+  <text x="273.0" y="273.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">• Pila vacía N(M): deja pila = λ</text>
+  <text x="273.0" y="290.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">(En AFPD, pila vacía es estrictamente más débil)</text>
+  <rect x="532" y="84" width="390" height="246" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="2"/>
+  <text x="727" y="110" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#B94A3E">Separación AFPD vs. AFPN</text>
+  <rect x="560" y="136" width="334" height="72" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="727.0" y="168.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">AFPD acepta {w c w^R}</text>
+  <text x="727.0" y="185.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">El marcador &#x27;c&#x27; indica la mitad exacta</text>
+  <rect x="560" y="224" width="334" height="82" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="727.0" y="261.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Solo AFPN acepta {w w^R}</text>
+  <text x="727.0" y="278.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Sin marcador central, debe adivinar la mitad usando ramas no deterministas</text>
+</svg>

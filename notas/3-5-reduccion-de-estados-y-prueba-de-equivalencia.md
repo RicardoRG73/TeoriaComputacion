@@ -6,6 +6,8 @@ El diseño inicial de un autómata finito o de una máquina secuencial a partir 
 
 En este subtema se integran las herramientas desarrolladas en 3.3 y 3.4 junto con los algoritmos de decisión de De Castro Korgi (2004, Secc. 3.6) y el teorema de Myhill-Nerode para formular el procedimiento completo de **minimización de estados** y las pruebas algorítmicas de **equivalencia entre máquinas**.
 
+![3.5 Reducción de estados y prueba de equivalencia](../figuras/3-5-reduccion-de-estados-y-prueba-de-equivalencia.svg)
+
 ## Paso previo: eliminación de estados inaccesibles
 
 Un estado $q \in Q$ es **accesible** (o **alcanzable**) desde el estado inicial $q_0$ si existe al menos una cadena $w \in \Sigma^*$ tal que $\hat{\delta}(q_0, w) = q$. Todo estado $q \in Q$ que no sea accesible jamás interviene en ningún cómputo que comience en $q_0$, por lo que su eliminación no altera ni la función de respuesta $\hat{\omega}(q_0, w)$ ni el lenguaje aceptado $L(M)$.
@@ -41,35 +43,37 @@ En lugar de trabajar por bloques de arriba hacia abajo, este algoritmo marca exp
 2. **Propagación (paso inductivo):** Repetir hasta que en una pasada completa no se marque ningún par nuevo: para cada par $\{p, q\}$ aún **no marcado**, inspeccionar cada $a \in \Sigma$; si el par $\{\delta(p, a), \delta(q, a)\}$ (con $\delta(p, a) \neq \delta(q, a)$) ya está marcado en la tabla, entonces **marcar $\{p, q\}$** (opcionalmente anotando el símbolo $a$ y el número de iteración para reconstruir la cadena testigo).
 3. **Agrupación:** Al finalizar la propagación, todos los pares $\{p, q\}$ que permanecen **sin marcar** cumplen $p \equiv q$. Por transitividad de $\equiv$, forman las clases de equivalencia de $Q$.
 
-## Construcción de la máquina cociente mínima y Teorema de Myhill-Nerode
+## Construcción de la máquina mínima (máquina cociente) y Teorema de Myhill-Nerode
 
-Sea $M$ una máquina accesible (sin estados inaccesibles) y sea $\equiv$ la partición en clases de equivalencia obtenida tras minimizar.
+Sea $M$ una máquina accesible (sin estados inaccesibles) y sea $\equiv$ la partición en grupos (clases de equivalencia) obtenida tras minimizar.
 
-### Máquina cociente $M_{\min} = M / {\equiv}$
+### Fusión de estados equivalentes: máquina cociente $M_{\min} = M / {\equiv}$
 
-Se define la **máquina cociente** $M_{\min} = (Q_{\min}, \Sigma, \Delta, \delta_{\min}, \omega_{\min}, q_{0,\min})$ mediante:
-- **$Q_{\min} = Q / {\equiv} = \{[q] : q \in Q\}$**, el conjunto de clases de equivalencia.
-- **$q_{0,\min} = [q_0]$**.
-- **$\delta_{\min}([q], a) = [\delta(q, a)]$** para todo $[q] \in Q_{\min}$ y $a \in \Sigma$.
+Construir la **máquina cociente** $M_{\min} = (Q_{\min}, \Sigma, \Delta, \delta_{\min}, \omega_{\min}, q_{0,\min})$ significa sencillamente **colapsar o fusionar cada grupo $[q]$ de estados equivalentes en un único estado representante**:
+- **$Q_{\min} = Q / {\equiv} = \{[q] : q \in Q\}$**, el conjunto de los grupos (clases de equivalencia) resultantes.
+- **$q_{0,\min} = [q_0]$** (el grupo que contiene al estado inicial original).
+- **$\delta_{\min}([q], a) = [\delta(q, a)]$** para todo grupo $[q] \in Q_{\min}$ y $a \in \Sigma$ (la flecha va hacia el grupo del estado destino).
 - **Función de salida:**
   - *En Mealy:* $\omega_{\min}([q], a) = \omega(q, a)$.
   - *En Moore:* $\omega_{\min}([q]) = \omega(q)$.
   - *En AFD:* $F_{\min} = \{[q] : q \in F\}$.
 
-**Buena definición:** Todas estas operaciones están bien definidas y son independientes del representante $q$ elegido en cada clase $[q]$: si $p \equiv q$, entonces $p \equiv_1 q$ (luego $\omega(p, a) = \omega(q, a)$ en Mealy), $p \equiv_0 q$ (luego $\omega(p) = \omega(q)$ en Moore / $p \in F \iff q \in F$ en AFD) y, por la propiedad de congruencia, $\delta(p, a) \equiv \delta(q, a)$ (luego $[\delta(p, a)] = [\delta(q, a)]$).
+**¿Por qué no importa qué estado elijamos como representante del grupo?** Si $p$ y $q$ quedaron en el mismo grupo ($p \equiv q$), entonces producen las mismas salidas inmediatas ($\omega(p, a) = \omega(q, a)$ en Mealy, $\omega(p) = \omega(q)$ en Moore, o $p \in F \iff q \in F$ en AFD) y, al leer cualquier símbolo $a$, sus destinos $\delta(p, a)$ y $\delta(q, a)$ también son equivalentes ($\delta(p, a) \equiv \delta(q, a)$, por lo que caen en el mismo grupo destino $[\delta(p, a)] = [\delta(q, a)]$).
 
 ### Teorema 3.5.1 (Teorema de Myhill-Nerode y unicidad de la máquina mínima)
 
-Para cualquier lenguaje $L \subseteq \Sigma^*$, considérese la **relación de equivalencia de Myhill-Nerode** $\sim_L$ sobre $\Sigma^*$ (Nerode, 1958):
+Para cualquier lenguaje $L \subseteq \Sigma^*$, podemos agrupar las cadenas de entrada según su comportamiento futuro respecto a $L$ mediante la **relación de equivalencia de Myhill-Nerode** $\sim_L$ (Nerode, 1958):
 
 $$x \sim_L y \iff \forall z \in \Sigma^*,\quad (xz \in L \iff yz \in L).$$
 
-El teorema establece tres resultados fundamentales (Hopcroft, Motwani & Ullman, 2002):
-1. $L$ es aceptado por algún AFD (es decir, $L$ es un lenguaje regular) si y solo si el número de clases de equivalencia de $\sim_L$ (llamado el **índice** de $\sim_L$) es **finito**.
-2. El número mínimo de estados de todo AFD que reconoce a $L$ es **exactamente igual** al índice de $\sim_L$.
-3. Si $M$ es un AFD accesible que reconoce a $L$, la máquina cociente $M_{\min} = M / {\equiv}$ tiene exactamente ese número mínimo de estados y es **única salvo isomorfismo** (es decir, cualquier otro AFD mínimo equivalente a $M$ es idéntico a $M_{\min}$ tras renombrar sus estados).
+*(Intuitivamente, $x \sim_L y$ significa que después de leer $x$ o leer $y$, cualquier continuación futura $z$ llevará a la misma decisión de aceptación o rechazo).*
 
-El principio de minimalidad y unicidad salvo isomorfismo se cumple análogamente para las máquinas secuenciales completamente especificadas de Moore y de Mealy reducidas y accesibles (Moore, 1956).
+El teorema establece tres resultados fundamentales (Hopcroft, Motwani & Ullman, 2002):
+1. $L$ es aceptado por algún AFD (es decir, $L$ es un lenguaje regular) si y solo si $\sim_L$ divide a $\Sigma^*$ en un número **finito** de grupos o clases de equivalencia (a esa cantidad de grupos se le llama el **índice** de $\sim_L$).
+2. El número mínimo de estados de todo AFD que reconoce a $L$ es **exactamente igual** a esa cantidad de grupos (el índice de $\sim_L$).
+3. Si $M$ es un AFD accesible que reconoce a $L$, la máquina reducida $M_{\min} = M / {\equiv}$ tiene exactamente ese número mínimo de estados y es **única salvo renombramiento de estados** (en matemáticas, *única salvo isomorfismo*): es decir, cualquier otro AFD mínimo para $L$ tiene exactamente la misma forma y transiciones, cambiando únicamente las etiquetas de los estados.
+
+El mismo principio de minimalidad y unicidad salvo renombramiento de estados se cumple para las máquinas secuenciales completamente especificadas de Moore y de Mealy reducidas y accesibles (Moore, 1956).
 
 ## Algoritmos de prueba de equivalencia entre dos máquinas $M_1$ y $M_2$
 
@@ -86,7 +90,7 @@ Dadas dos máquinas deterministas completamente especificadas $M_1 = (Q_1, \Sigm
 
 ### Algoritmo B: Autómata producto y búsqueda de alcanzabilidad `ALC` (De Castro Korgi, 2004, Secc. 3.6)
 
-De Castro Korgi (2004, Teorema 3.3.2 y Corolario 3.6.2, pp. 70–77) formula la prueba de equivalencia entre dos AFD $M_1$ y $M_2$ como un problema de **vacuidad** de la diferencia simétrica:
+De Castro Korgi (2004, Teorema 3.3.2 y Corolario 3.6.2, pp. 70–77) formula la prueba de equivalencia entre dos AFD $M_1$ y $M_2$ comprobando que su diferencia simétrica sea vacía (es decir, que **no exista ninguna cadena aceptada por una máquina y rechazada por la otra**):
 
 $$L(M_1) = L(M_2) \iff L(M_1) \oplus L(M_2) = \bigl(L(M_1) - L(M_2)\bigr) \cup \bigl(L(M_2) - L(M_1)\bigr) = \emptyset.$$
 

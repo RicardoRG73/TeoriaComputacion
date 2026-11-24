@@ -6,6 +6,8 @@ En ingeniería, las máquinas suelen clasificarse según el objeto principal que
 
 Un computador digital, un enrutador de red, un cajero automático y un **compilador** son todos máquinas de información. En particular, un traductor o compilador recibe una secuencia finita de caracteres escritos en un lenguaje fuente (código en C, Python o Java), mantiene información interna sobre símbolos declarados, tipos y contexto sintáctico, y produce como salida código objeto o mensajes de diagnóstico. Para estudiar estas herramientas con precisión matemática, la Teoría de la Computación abstrae el soporte físico (voltajes, transistores o discos magnéticos) y concibe todo cómputo como la **manipulación sistemática de secuencias finitas de símbolos** (De Castro Korgi, 2004, p. 5).
 
+![1.1 Máquinas de información](../figuras/1-1-maquinas-de-informacion.svg)
+
 ## Información discreta y representación simbólica
 
 ### Información continua frente a información discreta

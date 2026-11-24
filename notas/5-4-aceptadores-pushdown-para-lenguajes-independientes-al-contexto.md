@@ -6,6 +6,8 @@ $$\text{LIC} = \mathcal{L}(\text{AFPN}).$$
 
 Este resultado desempeña para los lenguajes de Tipo 2 el mismo papel unificador que el Teorema de Kleene desempeña para los lenguajes regulares (Tipo 3). En esta sección demostramos la primera dirección de la equivalencia: dada cualquier gramática independiente del contexto $G$, siempre es posible construir sistemáticamente un AFPN $M$ tal que $L(M) = L(G)$. Más allá de su valor teórico, esta construcción constituye el fundamento algorítmico de los **analizadores sintácticos** en compiladores e intérpretes (De Castro Korgi, 2004, Secc. 5.4, pp. 157–160; Acevedo Juárez, 2006, Secc. 3.9.1, pp. 113–117).
 
+![5.4 Aceptadores "pushdown" para lenguajes independientes al contexto](../figuras/5-4-aceptadores-pushdown-para-lenguajes-independientes-al-contexto.svg)
+
 ---
 
 ## 5.4.1 Análisis de sintaxis
@@ -17,13 +19,13 @@ Debido a que una derivación posee una estructura jerárquica y anidada, el anal
 1. **Análisis descendente (*top-down* o predictivo):**
    - Parte de la raíz del árbol sintáctico (el símbolo inicial $S$) y trata de construir una **derivación más a la izquierda** hacia las hojas (los terminales de $w$).
    - La pila almacena la parte aún pendiente de la forma sentencial: inicialmente contiene $S$; cuando el tope de la pila es un no terminal $A$, el autómata lo **expande** sustituyéndolo por el cuerpo $u$ de alguna producción $A \to u$; cuando el tope es un terminal $a$, lo **empareja** con el símbolo actual de la cinta de entrada y avanza sobre la entrada.
-   - Es la base de los analizadores **LL($k$)** y de descenso recursivo.
+   - Es la base de los analizadores predictivos conocidos en cursos posteriores de compiladores como **LL($k$)** y de descenso recursivo (que leen de izquierda a derecha eligiendo la regla adecuada).
 
 2. **Análisis ascendente (*bottom-up* o desplazamiento-reducción / *shift-reduce*):**
    - Parte de la cadena de entrada $w$ (las hojas del árbol) y trata de reconstruir en sentido inverso una **derivación más a la derecha** hasta llegar a $S$.
    - Alterna dos acciones principales sobre la pila: **desplazar (*shift*)**, que consiste en leer el siguiente símbolo de la entrada y apilarlo; y **reducir (*reduce*)**, que consiste en reconocer en el tope de la pila el lado derecho $u$ de una producción $A \to u$ y sustituirlo por la variable cabeza $A$.
    - La aceptación ocurre cuando se ha consumido toda la entrada y en la pila únicamente queda el símbolo inicial $S$ (sobre el marcador de fondo $z_0$).
-   - Es la base de los analizadores **LR($k$)**, **SLR** y **LALR** utilizados en herramientas como Yacc y Bison.
+   - Es la base de familias industriales de analizadores (como **LR($k$)**, **SLR** y **LALR**, que estudiarás a fondo en la materia de Compiladores).
 
 ```mermaid
 flowchart LR
@@ -48,7 +50,7 @@ flowchart LR
 | **Derivación simulada** | Derivación más a la izquierda | Derivación más a la derecha (en reverso) |
 | **Operación típica de pila** | Expansión ($\lambda, A / u$) y emparejamiento ($a, a / \lambda$) | Desplazamiento ($a, \text{tope} / a\text{tope}$) y reducción ($\lambda, u^R / A$) |
 | **Número de estados (versión AFPN)** | Constante ($3$ estados en De Castro Korgi) | Variable según patrones de reducción |
-| **Familias deterministas clásicas** | LL($1$), LL($k$) | LR($0$), SLR($1$), LALR($1$), LR($1$) |
+| **Familias deterministas (en Compiladores)** | Analizadores tipo LL | Analizadores tipo LR / SLR / LALR |
 
 ---
 
@@ -120,6 +122,8 @@ $$S \Rightarrow_{lm}^* w \iff (q_1, w, S) \vdash_M^* (q_1, \lambda, \lambda),$$
 donde $\Rightarrow_{lm}^*$ denota una **derivación más a la izquierda** en $G$.
 
 ### Demostración por inducción
+
+> **Guía de lectura (idea intuitiva antes de la prueba formal):** En cada momento de una derivación más a la izquierda, la cadena tiene una parte ya terminada a la izquierda (puros terminales $x$) y una parte aún por expandir a la derecha ($\alpha$, que empieza con una variable $A$). El autómata $M$ hace exactamente un espejo de este proceso: la parte $x$ ya fue leída y consumida de la cinta de entrada, mientras que la parte pendiente $\alpha$ es precisamente lo que está guardado en la pila. Cada regla $A \to u$ reemplaza el tope $A$ por $u$, y cada terminal al frente de la pila se empareja con la cinta.
 
 #### Dirección 1 ($\implies$): Si $S \Rightarrow_{lm}^* w$, entonces $(q_1, w, S) \vdash_M^* (q_1, \lambda, \lambda)$.
 

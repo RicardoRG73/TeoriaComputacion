@@ -1,0 +1,6 @@
+{
+  "markdown.marp.themes": [
+    "./diapositivas/industrial-brick.css"
+  ],
+  "markdown.marp.enableHTML": true
+}

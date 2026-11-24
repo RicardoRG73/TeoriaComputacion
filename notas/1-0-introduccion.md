@@ -23,6 +23,8 @@ flowchart TD
     C3 --> COMP
 ```
 
+![Unidad 1: Introducción](../figuras/1-0-introduccion.svg)
+
 ## Subtemas
 
 - [1.1 Máquinas de información](1-1-maquinas-de-informacion.md): Analiza la noción de información discreta, la codificación simbólica, la arquitectura funcional entrada–estado/procesamiento–salida y la distinción entre dispositivos físicos y modelos formales.

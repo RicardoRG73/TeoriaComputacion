@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="3.1 Máquinas de transición (Mealy) vs. Máquinas de estado (Moore)">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">3.1 Máquinas de transición (Mealy) vs. Máquinas de estado (Moore)</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Detector de &#x27;01&#x27;: dónde se produce la salida y longitud resultante para entrada w</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="84" width="428" height="246" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <rect x="56" y="96" width="160" height="22" rx="11" fill="#204254"/><text x="136.0" y="111" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">MEALY: ω : Q × Σ → Δ</text>
+  <line x1="88" y1="195" x2="119" y2="195" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="150" cy="195" r="28" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="150" y="200" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q0</text>
+  <circle cx="340" cy="195" r="28" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="340" y="200" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q1</text>
+  <path d="M 176 180 Q 245 142 314 180" fill="none" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="223.0" y="136" width="44.0" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="245" y="148" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">0 / 0</text>
+  <path d="M 314 212 Q 245 250 176 212" fill="none" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="223.0" y="233" width="44.0" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="245" y="245" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">1 / 1</text>
+  <text x="252" y="285" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#204254">Salida en la TRANSICIÓN (flecha)</text>
+  <text x="252" y="308" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#4E606D">Para |w| = m, emite m símbolos</text>
+  <rect x="494" y="84" width="428" height="246" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="2"/>
+  <rect x="512" y="96" width="150" height="22" rx="11" fill="#B94A3E"/><text x="587.0" y="111" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">MOORE: ω : Q → Δ</text>
+  <line x1="525" y1="195" x2="556" y2="195" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="585" cy="195" r="26" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="585" y="193" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">q0</text>
+  <text x="585" y="209" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">ω=0</text>
+  <circle cx="715" cy="195" r="26" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="715" y="193" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">q1</text>
+  <text x="715" y="209" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">ω=0</text>
+  <circle cx="845" cy="195" r="26" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="845" cy="195" r="21" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="845" y="193" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">q2</text>
+  <text x="845" y="209" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#4E606D">ω=1</text>
+  <line x1="611" y1="195" x2="686" y2="195" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="639.1" y="175.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="648.5" y="187.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">0</text>
+  <line x1="741" y1="195" x2="816" y2="195" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="769.1" y="175.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="778.5" y="187.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">1</text>
+  <path d="M 830 220 Q 715 262 602 220" fill="none" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="706.6" y="243" width="16.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="715" y="255" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">1</text>
+  <text x="708" y="285" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#B94A3E">Salida dentro del ESTADO (nodo)</text>
+  <text x="708" y="308" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#4E606D">Para |w| = m, emite m + 1 símbolos (incluye ω(q0))</text>
+</svg>

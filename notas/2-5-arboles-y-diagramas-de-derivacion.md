@@ -6,6 +6,8 @@ En una gramática libre del contexto (Tipo 2), una misma cadena puede derivarse 
 
 Para abstraer ese orden irrelevante y capturar la estructura sintáctica subyacente de una cadena, se utilizan los **árboles de derivación** (también denominados **árboles sintácticos** o **árboles de análisis sintáctico**, De Castro Korgi, 2004, Secc. 4.3, pp. 88–90; Acevedo Juárez, 2006, Secc. 3.3, pp. 90–92). La construcción de un árbol de derivación constituye la tarea central del **análisis sintáctico** (*parsing*) en los compiladores.
 
+![2.5 Árboles y diagramas de derivación](../figuras/2-5-arboles-y-diagramas-de-derivacion.svg)
+
 ## Definiciones formales
 
 ### Definición 2.5.1 (Árbol ordenado con raíz)

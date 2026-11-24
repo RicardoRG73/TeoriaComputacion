@@ -4,6 +4,8 @@ En la definición general de un autómata con pila no determinista (AFPN) no exi
 
 Para garantizar un comportamiento limpio, eficiente y de **terminación asegurada**, es necesario estudiar las condiciones bajo las cuales un aceptador *pushdown* es **propio** y **sin ciclos** (*loop-free*).
 
+![5.3 Aceptadores propios y sin ciclos](../figuras/5-3-aceptadores-propios-y-sin-ciclos.svg)
+
 ---
 
 ## Configuraciones improductivas y anomalías estructurales

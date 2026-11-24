@@ -19,14 +19,15 @@
 
 ## 3. Reglas de contenido y estilo
 1. **Idioma y tono:** Español académico claro y riguroso. Mantener consistencia terminológica con el temario oficial de `README.md`.
-2. **Bibliografía y citas (APA 7.ª edición):**
+2. **Nivel académico (Primer Semestre):** Respetar el nivel de **primer semestre** al redactar las notas; introducir los conceptos formales y demostraciones de forma gradual, con explicaciones intuitivas, sin dar por sentados conocimientos avanzados de semestres posteriores (por ejemplo, álgebra abstracta avanzada, análisis de algoritmos complejo o teoría de compiladores previa).
+3. **Bibliografía y citas (APA 7.ª edición):**
    - **Texto principal:** De Castro Korgi, R. (2004). *Teoría de la computación: Lenguajes, autómatas, gramáticas*. Universidad Nacional de Colombia.
    - **Complementaria:** Acevedo Juárez, A. (2006). *Teoría de la computación* [Tesis de licenciatura, Instituto Tecnológico de Celaya].
-3. **Notación matemática y diagramas:**
+4. **Notación matemática y diagramas:**
    - Usar LaTeX en Markdown (`$...$` en línea y `$$...$$` en bloque).
    - Seguir la notación de De Castro Korgi (2004): alfabetos ($\Sigma$), cadenas ($u, v, w$), cadena vacía ($\lambda$), longitud ($|w|$), concatenación, potencia ($w^n$), reflexión ($w^R$), clausura de Kleene ($\Sigma^*, L^*$), clausura positiva ($\Sigma^+, L^+$), gramáticas ($G$) y autómatas ($M$).
    - Representar diagramas de transición de autómatas y árboles de derivación preferentemente con bloques `mermaid` (`stateDiagram-v2` o `flowchart LR` / `TD`) o tablas de transición en Markdown.
-4. **Convenciones para archivos en `notas/`:**
+5. **Convenciones para archivos en `notas/`:**
    - Nombres en `kebab-case` (minúsculas, sin acentos ni caracteres especiales).
    - **Archivos de unidad (`X-0-<slug>.md`):** Título `# Unidad X: <Nombre>`, duración, competencia(s) a desarrollar y lista de enlaces a los archivos de sus subtemas.
    - **Archivos de subtema (`X-Y-<slug>.md`):** Título `# X.Y <Nombre>` y subtítulos `## X.Y.Z <Nombre>` según el temario. Al desarrollar el contenido de cada tema, incluir definiciones formales, explicación intuitiva, ejemplos paso a paso y ejercicios.

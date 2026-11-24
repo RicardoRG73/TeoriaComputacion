@@ -6,6 +6,8 @@ En el estudio de los sistemas digitales, los protocolos de comunicación, los co
 
 Como señala De Castro Korgi (2004, Cap. 2), un autómata finito procesa los símbolos de entrada escritos sobre una cinta de izquierda a derecha, contando con una unidad de control o memoria que posee un número finito de configuraciones internas llamadas **estados**. Mientras que los autómatas aceptadores deciden únicamente si una cadena pertenece o no a un lenguaje, en la teoría clásica de máquinas secuenciales (Mealy, 1955; Moore, 1956) se incorpora explícitamente un alfabeto de salida y una función de respuesta, dando origen a dos formulaciones canónicas: las **máquinas de transición** (de Mealy) y las **máquinas de estado** (de Moore).
 
+![3.1 Propiedades de las máquinas de estado finito](../figuras/3-1-propiedades-de-las-maquinas-de-estado-finito.svg)
+
 ## Modelo matemático general y propiedades fundamentales
 
 Una **máquina de estado finito determinista con salida** (o traductor secuencial finito) se especifica mediante seis componentes:

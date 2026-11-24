@@ -22,6 +22,8 @@ flowchart TD
     LING --> L5["Reflexión: Aᴿ"]
 ```
 
+![1.7 Operaciones sobre lenguajes](../figuras/1-7-operaciones-sobre-lenguajes.svg)
+
 ## 1. Operaciones conjuntistas (o booleanas)
 
 Dado que todo lenguaje sobre un alfabeto $\Sigma$ es un subconjunto de $\Sigma^*$ ($A, B \subseteq \Sigma^*$), heredan directamente las operaciones de la teoría de conjuntos (De Castro Korgi, 2004, Secc. 1.8, p. 11; Acevedo Juárez, 2006, Secc. 1.2.3.2, pp. 23–24):

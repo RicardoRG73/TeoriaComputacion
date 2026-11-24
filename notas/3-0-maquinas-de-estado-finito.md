@@ -28,6 +28,8 @@ flowchart TD
     Min --> Hist
 ```
 
+![Unidad 3: Máquinas de Estado Finito](../figuras/3-0-maquinas-de-estado-finito.svg)
+
 ## Subtemas
 
 - [3.1 Propiedades de las máquinas de estado finito](3-1-propiedades-de-las-maquinas-de-estado-finito.md)
@@ -41,7 +43,7 @@ flowchart TD
 - [3.4 Estados equivalentes](3-4-estados-equivalentes.md)
   - Definición de estados equivalentes ($p \equiv q$) y distinguibles ($p \not\equiv q$), relación de $k$-equivalencia ($\equiv_k$), demostración de sus propiedades como relación de equivalencia y refinamiento inductivo de particiones $P_0, P_1, \dots, P_k$ con cota de convergencia.
 - [3.5 Reducción de estados y prueba de equivalencia](3-5-reduccion-de-estados-y-prueba-de-equivalencia.md)
-  - Eliminación de estados inaccesibles, minimización por refinamiento de particiones y tabla de pares distinguibles, construcción de la máquina cociente mínima ($M / {\equiv}$), teorema de Myhill-Nerode y algoritmos de prueba de equivalencia entre dos máquinas $M_1$ y $M_2$.
+  - Eliminación de estados inaccesibles, minimización por refinamiento de particiones y tabla de pares distinguibles, construcción de la máquina mínima obtenida al fusionar estados equivalentes (máquina cociente $M / {\equiv}$), teorema de Myhill-Nerode y algoritmos de prueba de equivalencia entre dos máquinas $M_1$ y $M_2$.
 - [3.6 Historia de máquinas y memoria finita](3-6-historia-de-maquinas-y-memoria-finita.md)
   - Interpretación del estado como resumen finito de la historia de entrada, máquinas de memoria finita y eventos definidos de orden $k$, limitaciones inherentes a la memoria finita y evolución histórica desde McCulloch y Pitts (1943) hasta Rabin y Scott (1959).
 

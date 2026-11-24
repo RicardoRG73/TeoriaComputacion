@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="2.6 Ambigüedad: dos árboles distintos para 1 + 1 * 0">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">2.6 Ambigüedad: dos árboles distintos para 1 + 1 * 0</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Sin jerarquía de precedencia (E, T, F), una misma cadena admite interpretaciones opuestas</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="82" width="428" height="252" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="252" y="106" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#204254">Árbol 1: agrupa 1 + (1 * 0) = 1</text>
+  <circle cx="252" cy="142" r="16" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="252" y="147" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="165" cy="200" r="15" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="165" y="205" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="252" cy="200" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="252" y="205" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">+</text>
+  <circle cx="340" cy="200" r="15" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="340" y="205" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="165" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="165" cy="262" r="10" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="165" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <circle cx="275" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="275" cy="262" r="10" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="275" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <circle cx="340" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="340" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">*</text>
+  <circle cx="405" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="405" cy="262" r="10" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="405" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">0</text>
+  <line x1="238" y1="152" x2="178" y2="188" stroke="#204254" stroke-width="2"/>
+  <line x1="252" y1="158" x2="252" y2="185" stroke="#204254" stroke-width="2"/>
+  <line x1="266" y1="152" x2="327" y2="188" stroke="#204254" stroke-width="2"/>
+  <line x1="165" y1="215" x2="165" y2="247" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="328" y1="211" x2="285" y2="249" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="340" y1="215" x2="340" y2="247" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="352" y1="211" x2="395" y2="249" stroke="#B94A3E" stroke-width="2"/>
+  <text x="252" y="316" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#4E606D">Prioriza &#x27;*&#x27; en la rama inferior</text>
+  <rect x="494" y="82" width="428" height="252" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="2"/>
+  <text x="708" y="106" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#B94A3E">Árbol 2: agrupa (1 + 1) * 0 = 0</text>
+  <circle cx="708" cy="142" r="16" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="708" y="147" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="620" cy="200" r="15" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="620" y="205" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="708" cy="200" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="708" y="205" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">*</text>
+  <circle cx="795" cy="200" r="15" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="795" y="205" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">S</text>
+  <circle cx="555" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="555" cy="262" r="10" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="555" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <circle cx="620" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <text x="620" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">+</text>
+  <circle cx="685" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="685" cy="262" r="10" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="685" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <circle cx="795" cy="262" r="15" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="795" cy="262" r="10" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="795" y="267" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">0</text>
+  <line x1="694" y1="152" x2="633" y2="188" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="708" y1="158" x2="708" y2="185" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="722" y1="152" x2="782" y2="188" stroke="#B94A3E" stroke-width="2"/>
+  <line x1="608" y1="211" x2="565" y2="249" stroke="#204254" stroke-width="2"/>
+  <line x1="620" y1="215" x2="620" y2="247" stroke="#204254" stroke-width="2"/>
+  <line x1="632" y1="211" x2="675" y2="249" stroke="#204254" stroke-width="2"/>
+  <line x1="795" y1="215" x2="795" y2="247" stroke="#204254" stroke-width="2"/>
+  <text x="708" y="316" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#B94A3E">Solución: estratificar niveles E → T → F → N</text>
+</svg>

@@ -6,6 +6,8 @@ En todo compilador o intérprete, el archivo de entrada —por complejo que sea 
 
 Como advierte De Castro Korgi (2004, p. 5), la exigencia teórica de que toda entrada y salida sea identificable en tiempo finito impone dos restricciones fundamentales: el alfabeto debe ser **finito** y solo se consideran cadenas de **longitud finita**.
 
+![1.5 Cadenas de lenguajes](../figuras/1-5-cadenas-de-lenguajes.svg)
+
 ## Alfabetos, símbolos y cadenas
 
 ### Símbolo y alfabeto ($\Sigma$)

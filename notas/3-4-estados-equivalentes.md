@@ -6,6 +6,8 @@ En el subtema 3.3 se definió la equivalencia entre dos máquinas completas $M_1
 
 Intuitivamente, dos estados $p$ y $q$ de una máquina de estado finito son equivalentes si ningún usuario externo, mediante la aplicación de experimentos de entrada $w \in \Sigma^*$ y la observación de las salidas correspondientes, puede distinguir si la máquina comenzó operando en $p$ o en $q$. Cuando existen varios estados equivalentes entre sí, todos ellos condensan exactamente la misma información respecto al futuro computacional y pueden fusionarse en un único estado sin alterar el comportamiento de la máquina.
 
+![3.4 Estados equivalentes](../figuras/3-4-estados-equivalentes.svg)
+
 ## Definiciones formales: equivalencia y distinguibilidad de estados
 
 Sea $M = (Q, \Sigma, \Delta, \delta, \omega, q_0)$ una máquina de estado finito determinista y completamente especificada (de Mealy o de Moore; en el caso de un AFD, basta interpretarlo como una máquina de Moore con $\Delta = \{0, 1\}$ donde $\omega(q) = 1 \iff q \in F$).
@@ -70,7 +72,7 @@ Tanto la relación de equivalencia total $\equiv$ como cada relación $\equiv_k$
 2. **Simétrica:** $\forall p, q \in Q$, si $p \equiv_k q$ entonces $q \equiv_k p$ (y análogamente para $\equiv$), por simetría de la igualdad de cadenas $\hat{\omega}(p, w) = \hat{\omega}(q, w)$.
 3. **Transitiva:** $\forall p, q, r \in Q$, si $p \equiv_k q$ y $q \equiv_k r$, entonces para toda $w$ con $|w| \le k$ se cumple $\hat{\omega}(p, w) = \hat{\omega}(q, w) = \hat{\omega}(r, w)$, de modo que $p \equiv_k r$ (y análogamente para $\equiv$).
 
-Como toda relación de equivalencia sobre un conjunto finito $Q$, cada $\equiv_k$ induce una **partición** $P_k$ de $Q$ en bloques (clases de equivalencia) no vacíos, disjuntos dos a dos, cuya unión es $Q$.
+Como toda relación de equivalencia sobre un conjunto finito $Q$, cada $\equiv_k$ induce una **partición** $P_k$ de $Q$. Intuitivamente, hacer una partición consiste simplemente en **agrupar los estados en "cajas" o bloques** no vacíos y sin elementos repetidos, de modo que cada estado pertenezca exactamente a un solo grupo (su **clase de equivalencia**) y dos estados en el mismo grupo se comporten de manera indistinguible hasta longitud $k$.
 
 ## Cálculo inductivo de particiones $P_0, P_1, \dots, P_k$ y convergencia
 
@@ -242,7 +244,7 @@ Obtenemos **$P_2 = P_1$**. Por tanto, las clases de equivalencia finales son $\{
    - $s_3$: $a \to (s_3, 1)$, $b \to (s_2, 0)$
    - $s_4$: $a \to (s_1, 0)$, $b \to (s_2, 1)$
    determine las particiones $P_0, P_1, \dots, P_k$, indique las clases de equivalencia finales y proporcione una cadena testigo para cada par de estados distinguibles.
-4. **Demostración:** Demuestre formalmente que, si $p \equiv q$ en una máquina determinista $M$, entonces para todo símbolo $a \in \Sigma$ también se cumple $\delta(p, a) \equiv \delta(q, a)$ (propiedad de congruencia de la equivalencia de estados).
+4. **Demostración:** Demuestre formalmente que, si $p \equiv q$ en una máquina determinista $M$, entonces para todo símbolo $a \in \Sigma$ también se cumple $\delta(p, a) \equiv \delta(q, a)$ (es decir, si dos estados son equivalentes, al leer el mismo símbolo $a$ necesariamente llegan a estados que también son equivalentes; esta propiedad suele llamarse *congruencia*).
 
 ## Referencias
 

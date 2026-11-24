@@ -41,6 +41,8 @@ flowchart TD
     AM --> AM2["Desambiguación y Lenguajes inherentemente ambiguos"]
 ```
 
+![Unidad 2: Gramáticas Formales](../figuras/2-0-gramaticas-formales.svg)
+
 ## Subtemas
 
 - [2.1 Representación de los lenguajes](2-1-representacion-de-los-lenguajes.md): Métodos finitos para especificar lenguajes finitos e infinitos (extensión, comprensión, definiciones recursivas, expresiones regulares, gramáticas y autómatas) junto con sus alcances expresivos.

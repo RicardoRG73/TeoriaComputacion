@@ -33,6 +33,8 @@ flowchart TD
 
 > **Observación sobre $\lambda$ en la inclusión $\mathcal{L}_2 \subsetneq \mathcal{L}_1$:** En sentido estricto, una gramática no contractiva sin excepción para $S \to \lambda$ solo genera cadenas no vacías ($\lambda \notin L$). Para garantizar que todo lenguaje libre del contexto pertenezca a $\mathcal{L}_1$, se admite en las gramáticas de Tipo 1 la producción excepcional $S \to \lambda$ siempre que $S$ no aparezca en el lado derecho de ninguna producción. Bajo esta convención estándar (Chomsky, 1959; Hopcroft et al., 2007), la cadena de inclusiones $\mathcal{L}_3 \subsetneq \mathcal{L}_2 \subsetneq \mathcal{L}_1 \subsetneq \mathcal{L}_0$ se cumple sin excepciones.
 
+![2.4 Tipos de gramáticas](../figuras/2-4-tipos-de-gramaticas.svg)
+
 ---
 
 ## 2.4.1 Gramáticas sin restricción

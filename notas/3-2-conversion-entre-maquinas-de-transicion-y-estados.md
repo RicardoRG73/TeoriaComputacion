@@ -6,6 +6,8 @@ En el subtema anterior se definieron dos variantes de máquinas de estado finito
 
 La respuesta es afirmativa, salvo por una diferencia estructural inevitable: **el desfase de un símbolo en la longitud de la salida**. Mientras una máquina de Mealy responde a una cadena $w \in \Sigma^*$ de longitud $m$ con una cadena de salida de longitud $m$, una máquina de Moore emite primero la salida de su estado inicial $\omega(q_0)$ y produce en total $m + 1$ símbolos. Este tema formaliza dicha equivalencia y presenta los algoritmos constructivos de conversión en ambas direcciones.
 
+![3.2 Conversión entre máquinas de transición y estados](../figuras/3-2-conversion-entre-maquinas-de-transicion-y-estados.svg)
+
 ## Equivalencia módulo símbolo inicial entre Mealy y Moore
 
 Sea $M_{\text{Mealy}} = (Q_1, \Sigma, \Delta, \delta_1, \omega_1, q_{01})$ una máquina de transición y $M_{\text{Moore}} = (Q_2, \Sigma, \Delta, \delta_2, \omega_2, q_{02})$ una máquina de estado sobre los mismos alfabetos $\Sigma$ y $\Delta$.

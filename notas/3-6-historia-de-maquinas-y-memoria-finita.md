@@ -6,6 +6,8 @@ El título de este subtema encierra una dualidad conceptual esencial en la teor�
 
 Comprender cómo la memoria finita condensa historias arbitrariamente largas —y cuáles son sus límites teóricos infranqueables— prepara directamente el terreno para el estudio de los lenguajes regulares y sus propiedades de no regularidad (Unidad 4) y motiva la necesidad de memorias externas ilimitadas como las pilas (Unidad 5).
 
+![3.6 Historia de máquinas y memoria finita](../figuras/3-6-historia-de-maquinas-y-memoria-finita.svg)
+
 ## El estado como resumen finito de la historia de entrada
 
 Considérese una máquina de estado finito $M = (Q, \Sigma, \Delta, \delta, \omega, q_0)$ que ha leído una cadena (o *historia*) $w = a_1 a_2 \cdots a_m \in \Sigma^*$. En ese instante, la máquina se encuentra en el estado $q = \hat{\delta}(q_0, w) \in Q$.
@@ -68,7 +70,7 @@ flowchart LR
 | **1955** | George H. Mealy | Formaliza el modelo de máquina secuencial cuya salida depende del estado presente y la entrada actual (*máquina de transición*). |
 | **1956** | Edward F. Moore | Formaliza las máquinas cuya salida depende solo del estado (*máquina de estado*), plantea los *experimentos mentales* de identificación y demuestra la cota $n - 1$ para distinguir estados. |
 | **1956** | Stephen C. Kleene | Demuestra la equivalencia entre redes nerviosas/autómatas finitos y expresiones regulares (Teorema de Kleene; De Castro Korgi, 2004, Secc. 2.8–2.11) e introduce la noción de *eventos definidos*. |
-| **1957–1958** | John Myhill y Anil Nerode | Caracterizan los lenguajes regulares y el autómata mínimo único mediante clases de congruencia sobre historias de entrada ($\sim_L$). |
+| **1957–1958** | John Myhill y Anil Nerode | Caracterizan los lenguajes regulares y el autómata mínimo único agrupando las historias de entrada que conducen al mismo comportamiento futuro ($\sim_L$, clases de equivalencia). |
 | **1959** | Michael O. Rabin y Dana Scott | Establecen la formulación algebraica moderna del AFD y el AFN, prueban su equivalencia computacional y analizan problemas de decisión (*Finite automata and their decision problems*, trabajo galardonado con el Premio Turing en 1976). |
 
 ## Ejemplos desarrollados paso a paso

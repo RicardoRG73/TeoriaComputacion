@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="5.5 Método de variables triples [q, A, p] (AFPN por pila vacía → GIC)">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">5.5 Método de variables triples [q, A, p] (AFPN por pila vacía → GIC)</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Cada tripleta [q, A, p] genera las cadenas w que vacían A pasando del estado q al estado p</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="45" y="92" width="870" height="62" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="480.0" y="119.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">Equivalencia por tripla:   [q, A, rₖ] ⇒*_G w   ⟺   (q, w, A) ⊢*_M (rₖ, λ, λ)</text>
+  <text x="480.0" y="136.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Para regla (r₀, Y₁ Y₂ ... Yₖ) ∈ Δ(q, a, A):   [q, A, rₖ] → a [r₀, Y₁, r₁] [r₁, Y₂, r₂] ··· [rₖ₋₁, Yₖ, rₖ]</text>
+  <rect x="55" y="184" width="160" height="74" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="135.0" y="217.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Consume &#x27;a&#x27;</text>
+  <text x="135.0" y="234.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">q → r₀</text>
+  <line x1="215" y1="221" x2="255" y2="221" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="258" y="184" width="200" height="74" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="358.0" y="217.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">[r₀, Y₁, r₁] ⇒* w₁</text>
+  <text x="358.0" y="234.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Vacía Y₁ (r₀ → r₁)</text>
+  <line x1="458" y1="221" x2="498" y2="221" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="501" y="184" width="200" height="74" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="601.0" y="217.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">[r₁, Y₂, r₂] ⇒* w₂</text>
+  <text x="601.0" y="234.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Vacía Y₂ (r₁ → r₂)</text>
+  <line x1="701" y1="221" x2="741" y2="221" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="744" y="184" width="165" height="74" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="826.5" y="217.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">... [rₖ₋₁, Yₖ, rₖ]</text>
+  <text x="826.5" y="234.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Vacía tope hasta rₖ</text>
+  <text x="480" y="304" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#204254">Regla inicial: S → [q₀, z₀, p] para todo p ∈ Q   |   Luego se eliminan tripletas inútiles</text>
+</svg>

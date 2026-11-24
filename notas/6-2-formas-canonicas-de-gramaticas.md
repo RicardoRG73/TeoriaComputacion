@@ -6,6 +6,8 @@ Lejos de ser meras curiosidades formales, las formas canónicas cumplen un doble
 1. Permiten demostrar resultados estructurales profundos sobre todos los lenguajes independientes del contexto (LIC), como el Lema de bombeo (Sección 6.3).
 2. Hacen posible el diseño de algoritmos eficientes de análisis sintáctico y decisión de pertenencia —en particular, el algoritmo **CYK** mediante la Forma Normal de Chomsky y la correspondencia directa con autómatas con pila sin transiciones-$\lambda$ mediante la Forma Normal de Greibach.
 
+![6.2 Formas canónicas de gramáticas](../figuras/6-2-formas-canonicas-de-gramaticas.svg)
+
 ---
 
 ## 6.2.1 Gramáticas en forma normal
@@ -111,7 +113,7 @@ flowchart TD
 
 ### Aplicación de la FNC al algoritmo CYK
 
-Probar todos los árboles posibles con $2n - 1$ variables requeriría tiempo exponencial respecto a $n$. El **algoritmo CYK** (Cocke–Younger–Kasami) aprovecha la estructura binaria de la FNC para resolver el problema de pertenencia $w \in L(G)$ en tiempo polinomial $O(n^3 \cdot |P|)$ mediante **programación dinámica** (De Castro Korgi, 2004, Secc. 4.15, pp. 136–139).
+Probar todos los árboles posibles de una cadena de longitud $n$ tomaría un tiempo enorme (crecimiento exponencial: si $n$ crece un poco, las combinaciones se multiplican explosivamente). El **algoritmo CYK** (Cocke–Younger–Kasami) aprovecha que los árboles en FNC son binarios para decidir $w \in L(G)$ llenando una tabla de abajo hacia arriba (técnica conocida como **programación dinámica**): primero calcula qué variables generan cada letra individual (longitud $1$), luego usa esos resultados para cada par de letras vecinas (longitud $2$), después para fragmentos de longitud $3$, y así sucesivamente hasta llegar a la cadena completa sin repetir cálculos (De Castro Korgi, 2004, Secc. 4.15, pp. 136–139). Como el trabajo crece proporcionalmente a $n^3 \cdot |P|$ (polinomial), resulta práctico incluso para cadenas largas.
 
 Sea $w = a_1 a_2 \dots a_n \in \Sigma^+$ ($n \ge 1$) y $G$ una gramática en FNC. Para $1 \le i \le n$ y $1 \le j \le n - i + 1$, definimos el conjunto:
 $$X_{i,j} := \{A \in V \mid A \Rightarrow_G^+ a_i a_{i+1} \dots a_{i+j-1}\}$$

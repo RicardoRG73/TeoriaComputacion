@@ -21,6 +21,8 @@ flowchart TD
 
 En la década de 1960, investigadores en ciencias de la computación (entre ellos John Backus y Peter Naur) advirtieron que este mismo mecanismo de reescritura permitía especificar con total precisión la sintaxis de lenguajes de programación como ALGOL 60 y construir analizadores sintácticos (*parsers*) para compiladores. A partir de esta convergencia surgieron la **notación BNF** (*Backus-Naur Form*) y los elementos estructurales que definen toda gramática formal.
 
+![2.2 Conceptos básicos de gramáticas](../figuras/2-2-conceptos-basicos-de-gramaticas.svg)
+
 ## Elementos constitutivos de una gramática
 
 Una gramática formal articula cuatro componentes fundamentales: dos conjuntos de símbolos (no terminales y terminales), un símbolo distinguido de arranque y un conjunto finito de reglas de producción.

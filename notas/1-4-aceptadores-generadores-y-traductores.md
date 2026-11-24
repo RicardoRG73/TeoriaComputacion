@@ -10,6 +10,8 @@ En el estudio de los lenguajes formales y la construcción de compiladores, una 
 
 Como resume De Castro Korgi (2004, p. 4), gran parte de la Teoría de la Computación gira en torno a la estrecha interacción entre mecanismos que **procesan o aceptan** cadenas (autómatas), mecanismos que **generan** cadenas (gramáticas y expresiones regulares) y mecanismos que **calculan funciones o traducen** entradas en salidas (máquinas con salida y máquinas de Turing).
 
+![1.4 Aceptadores, generadores y traductores](../figuras/1-4-aceptadores-generadores-y-traductores.svg)
+
 ## 1. Aceptadores (o reconocedores)
 
 ### Definición formal y función matemática

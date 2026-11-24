@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="1.6 Anatomía de una cadena: prefijos, subcadenas, sufijos y reflexión">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">1.6 Anatomía de una cadena: prefijos, subcadenas, sufijos y reflexión</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Descomposición u = x · v · y (ejemplo u = bcbaadb) y regla inversa (uv)^R = v^R u^R</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<text x="480" y="96" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Cadena u = x · v · y  (longitud |u| = 7)</text>
+  <rect x="268" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="298.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">b</text>
+  <rect x="328" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="358.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">c</text>
+  <rect x="388" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="418.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">b</text>
+  <rect x="448" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="478.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">a</text>
+  <rect x="508" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="538.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">a</text>
+  <rect x="568" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="598.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">d</text>
+  <rect x="628" y="110" width="60" height="40" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="658.0" y="135.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">b</text>
+  <rect x="268" y="156" width="120" height="24" rx="5" fill="#EEF3F6" stroke="#204254" stroke-width="1.5"/>
+  <text x="328" y="172" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#204254">Prefijo x = bc</text>
+  <rect x="388" y="156" width="180" height="24" rx="5" fill="#FDF4F2" stroke="#B94A3E" stroke-width="1.5"/>
+  <text x="478" y="172" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#B94A3E">Subcadena v = baa</text>
+  <rect x="568" y="156" width="120" height="24" rx="5" fill="#EEF3F6" stroke="#204254" stroke-width="1.5"/>
+  <text x="628" y="172" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#204254">Sufijo y = db</text>
+  <rect x="55" y="205" width="850" height="122" rx="10" fill="#FFFFFF" stroke="#CBD6DE" stroke-width="1.5"/>
+  <text x="480" y="230" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#B94A3E">Reflexión de una concatenación: (u · v)^R = v^R · u^R</text>
+  <rect x="95" y="248" width="160" height="56" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="175.0" y="272.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">u = ab</text>
+  <text x="175.0" y="289.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">u^R = ba</text>
+  <rect x="275" y="248" width="170" height="56" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="360.0" y="272.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">v = bca</text>
+  <text x="360.0" y="289.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">v^R = acb</text>
+  <line x1="455" y1="276" x2="515" y2="276" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="451.8" y="256.0" width="66.4" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="485.0" y="268.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">invertir</text>
+  <rect x="525" y="248" width="340" height="56" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="695.0" y="272.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">(uv)^R = (abbca)^R = acbba</text>
+  <text x="695.0" y="289.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">v^R · u^R = (acb)(ba) = acbba</text>
+</svg>

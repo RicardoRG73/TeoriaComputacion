@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="3.6 Memoria finita de orden k y evolución histórica (1936–1959)">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">3.6 Memoria finita de orden k y evolución histórica (1936–1959)</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">El estado resume la historia de entradas; ventana deslizante de orden k</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="38" y="82" width="884" height="106" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="480" y="106" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#204254">Máquina definida de orden k = 2: el estado solo depende de los últimos k símbolos</text>
+  <rect x="105" y="122" width="52" height="38" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="131.0" y="146.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">0</text>
+  <rect x="157" y="122" width="52" height="38" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="183.0" y="146.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <rect x="209" y="122" width="52" height="38" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="235.0" y="146.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">0</text>
+  <rect x="261" y="122" width="52" height="38" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="287.0" y="146.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <rect x="313" y="122" width="52" height="38" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <text x="339.0" y="146.0" text-anchor="middle" font-family="Cascadia Code, Consolas, monospace" font-size="14" font-weight="700" fill="#121B22">1</text>
+  <rect x="261" y="117" width="104" height="48" rx="6" fill="none" stroke="#B94A3E" stroke-width="2.5"/>
+  <text x="313" y="178" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#B94A3E">sufijo z ∈ Σ²</text>
+  <line x1="375" y1="141" x2="470" y2="141" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="385.9" y="121.0" width="73.19999999999999" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="422.5" y="133.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">determina</text>
+  <rect x="478" y="118" width="410" height="48" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="683.0" y="138.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">Mismo estado destino δ̂(p, z) = δ̂(q, z)</text>
+  <text x="683.0" y="155.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Ejemplo contrario: paridad de unos NO tiene orden k finito</text>
+  <text x="480" y="215" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#121B22">Hitos históricos de los autómatas finitos</text>
+  <rect x="40" y="230" width="155" height="86" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="117.5" y="269.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">1936 · Turing</text>
+  <text x="117.5" y="286.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">Máquina de Turing</text>
+  <rect x="215" y="230" width="165" height="86" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="297.5" y="269.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">1943 · McCulloch-Pitts</text>
+  <text x="297.5" y="286.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Redes lógicas finitas</text>
+  <rect x="400" y="230" width="165" height="86" rx="9" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2"/>
+  <text x="482.5" y="269.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">1954–56 · Huffman</text>
+  <text x="482.5" y="286.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Mealy, Moore, Kleene</text>
+  <rect x="585" y="230" width="165" height="86" rx="9" fill="#EEF3F6" stroke="#204254" stroke-width="2"/>
+  <text x="667.5" y="269.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#121B22">1957–58 · Myhill</text>
+  <text x="667.5" y="286.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#4E606D">Nerode (autómata mín.)</text>
+  <rect x="770" y="230" width="150" height="86" rx="9" fill="#204254" stroke="#121B22" stroke-width="2"/>
+  <text x="845.0" y="269.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">1959 · Rabin-Scott</text>
+  <text x="845.0" y="286.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" fill="#DCE7EE">AFD/AFN modernos</text>
+  <line x1="195" y1="273" x2="212" y2="273" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <line x1="380" y1="273" x2="397" y2="273" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <line x1="565" y1="273" x2="582" y2="273" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <line x1="750" y1="273" x2="767" y2="273" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+</svg>

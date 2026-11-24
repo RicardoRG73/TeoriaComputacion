@@ -4,6 +4,8 @@ En la sección anterior se probó que todo lenguaje generado por una gramática 
 
 Por el Teorema de equivalencia entre criterios de aceptación (Secc. 5.2 / De Castro Korgi, Teorema 5.3.2), cualquier lenguaje aceptado por un AFPN por estado final es también aceptado por algún AFPN que **acepta por pila vacía**, es decir, $L = N(M)$. Esta formulación simplifica notablemente la traducción a una gramática, pues el momento de aceptación coincide exactamente con el instante en que la pila queda vacía tras extraer su último símbolo.
 
+![5.5 Gramáticas independientes al contexto para aceptadores "pushdown"](../figuras/5-5-gramaticas-independientes-al-contexto-para-aceptadores-pushdown.svg)
+
 ---
 
 ## Construcción inversa: método de variables triples
@@ -39,6 +41,8 @@ La regla 3 refleja que, tras consumir $a$ y reemplazar $A$ por $Y_1 Y_2 \cdots Y
 ---
 
 ## Demostración de corrección: $L(G) = N(M)$
+
+> **Guía de lectura (idea intuitiva antes de la prueba formal):** Imagina que la pila contiene inicialmente el símbolo $A$ en el tope, y que el autómata tarda varios pasos leyendo una subcadena $w$ hasta que finalmente logra borrar ese $A$ y deja expuestos los símbolos que estaban debajo. Si al reemplazar $A$ el autómata apiló $Y_1 Y_2$, primero tendrá que leer un trozo $w_1$ para vaciar $Y_1$ (llegando a cierto estado intermedio $r_1$) y después leer el trozo $w_2$ para vaciar $Y_2$ (llegando al estado final $p$). La regla de tripletas $[q, A, p] \to a[r_0, Y_1, r_1][r_1, Y_2, p]$ divide exactamente esa historia en sub-problemas independientes.
 
 Para probar que $L(G) = N(M)$, demostraremos el siguiente lema central (De Castro Korgi, 2004, pp. 160–162):
 

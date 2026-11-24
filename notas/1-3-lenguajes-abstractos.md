@@ -6,6 +6,8 @@ La comunicación humana descansa en los **lenguajes naturales** (español, ingl�
 
 Esta necesidad motivó la creación de la teoría de **lenguajes formales** (o lenguajes abstractos), impulsada en la década de 1950 por el lingüista Noam Chomsky y adoptada rápidamente por los pioneros de la computación para definir la sintaxis de lenguajes como ALGOL, Pascal y C y construir sus **compiladores** (De Castro Korgi, 2004, pp. 4, 81, 94; Acevedo Juárez, 2006, pp. 19, 39–40).
 
+![1.3 Lenguajes abstractos](../figuras/1-3-lenguajes-abstractos.svg)
+
 ## Lenguajes naturales, lenguajes formales y lenguajes de programación
 
 ### Lenguajes naturales frente a lenguajes formales

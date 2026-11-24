@@ -7,6 +7,8 @@ En las secciones 4.1 a 4.3 se estableció que los lenguajes regulares coinciden 
 1. **¿Qué límites tiene la memoria finita?** Si intentamos escribir una expresión regular para verificar expresiones con paréntesis equilibrados arbitrariamente profundos —o cadenas de la forma $\{a^k b^k : k \ge 0\}$—, intuimos que ningún autómata de $n$ estados puede "contar" más allá de $n$ sin repetir estados. El **Lema de bombeo** formaliza esta intuición y proporciona una herramienta rigurosa para demostrar que un lenguaje **no** es regular.
 2. **¿Cómo se comportan y deciden los lenguajes regulares?** Las **propiedades de clausura** muestran qué operaciones preservan la regularidad (lo cual permite construir nuevos analizadores a partir de otros más simples, o probar no regularidad por reducción), mientras que los **algoritmos de decisión** garantizan que preguntas clave de verificación —¿acepta un autómata alguna cadena?, ¿son equivalentes dos expresiones regulares?— pueden resolverse de manera automática y exacta.
 
+![4.4 Propiedades de los lenguajes de estado finito](../figuras/4-4-propiedades-de-los-lenguajes-de-estado-finito.svg)
+
 ---
 
 ## 4.4.1 El Lema de bombeo para lenguajes regulares
@@ -49,7 +51,7 @@ Verificamos las tres propiedades:
 
 ### Uso correcto del Lema de bombeo (prueba por contradicción)
 
-> **Advertencia lógica:** El Lema de bombeo establece una **condición necesaria**, pero **no suficiente**, para que un lenguaje sea regular (existen lenguajes no regulares que también satisfacen las condiciones del bombeo). Además, todo **lenguaje finito** cumple vacuamente el lema tomando $n = 1 + \max_{w \in L} |w|$ (pues no existe ninguna $w \in L$ con $|w| \ge n$).
+> **Advertencia lógica:** El Lema de bombeo establece una **condición necesaria**, pero **no suficiente**, para que un lenguaje sea regular (existen lenguajes no regulares que también satisfacen las condiciones del bombeo). Además, todo **lenguaje finito** cumple automáticamente el lema (por vacuidad) tomando $n = 1 + \max_{w \in L} |w|$, ya que no existe ninguna cadena $w \in L$ tan larga como $n$ que pueda contradecir la condición.
 
 Para demostrar que un lenguaje $L$ **no es regular** mediante reducción al absurdo se procede así:
 1. **Suposición:** Supóngase que $L$ es regular. Entonces existe una constante de bombeo $n \ge 1$ dada por el lema (fija, pero desconocida; no podemos elegir el valor de $n$).
@@ -79,7 +81,7 @@ Se dice que la familia $\mathcal{R}$ de todos los lenguajes regulares sobre $\Si
    *Prueba booleana:* Por leyes de De Morgan, $L_1 \cap L_2 = \overline{\overline{L_1} \cup \overline{L_2}}$, que es regular por (1) y (4).
 6. **Diferencia y diferencia simétrica:** $L_1 - L_2 = L_1 \cap \overline{L_2}$ y $L_1 \triangle L_2 = (L_1 - L_2) \cup (L_2 - L_1)$.
 
-En particular, $\mathcal{R} \subseteq \mathcal{P}(\Sigma^*)$ constituye un **álgebra booleana de conjuntos** (contiene a $\emptyset$ y $\Sigma^*$ y es cerrada bajo unión, intersección y complemento).
+En particular, la familia $\mathcal{R}$ es cerrada bajo las operaciones básicas de conjuntos —unión, intersección y complemento— y contiene al lenguaje vacío $\emptyset$ y al universo $\Sigma^*$ (en matemáticas, a una colección con estas propiedades se le denomina **álgebra booleana de conjuntos**).
 
 > **Límites de la clausura:** La familia $\mathcal{R}$ **no** es cerrada bajo uniones o intersecciones infinitas (por ejemplo, $\bigcup_{k \ge 1} \{a^k b^k\}$ es unión infinita de lenguajes unitarios regulares cuyo resultado no es regular) ni bajo subconjuntos (todo lenguaje $L \subseteq \Sigma^*$ es subconjunto del lenguaje regular $\Sigma^*$).
 
@@ -105,8 +107,8 @@ Por inducción sobre $w \in \Sigma^*$ se demuestra inmediatamente que $\hat{\del
    $$\emptyset^R = \emptyset,\quad \lambda^R = \lambda,\quad a^R = a,\quad (r + s)^R = r^R + s^R,\quad (rs)^R = s^R r^R,\quad (r^*)^R = (r^R)^*.$$
    *(Operacionalmente, equivale a invertir la dirección de todas las transiciones de un AFN para $L$ y cambiar entre estados iniciales y finales).*
 
-2. **Homomorfismos (Teorema 3.4.1 de De Castro Korgi, pp. 72–73):** Un **homomorfismo** es una función $h : \Sigma^* \to \Gamma^*$ que satisface $h(\lambda) = \lambda$ y $h(uv) = h(u)h(v)$ para todo $u, v \in \Sigma^*$; queda completamente determinado por las imágenes $h(a) \in \Gamma^*$ de cada símbolo $a \in \Sigma$.  
-   **Clausura:** Si $L \subseteq \Sigma^*$ es regular, entonces su imagen homomorfa $h(L) = \{h(w) : w \in L\} \subseteq \Gamma^*$ es regular sobre $\Gamma$.  
+2. **Homomorfismos (sustitución uniforme de símbolos; Teorema 3.4.1 de De Castro Korgi, pp. 72–73):** Intuitivamente, un **homomorfismo** es una regla de traducción o reemplazo que sustituye cada símbolo $a \in \Sigma$ por una cadena fija $h(a) \in \Gamma^*$ (como un diccionario símbolo a cadena). Formalmente, es una función $h : \Sigma^* \to \Gamma^*$ que cumple $h(\lambda) = \lambda$ y $h(uv) = h(u)h(v)$ para todo $u, v \in \Sigma^*$.
+   **Clausura:** Si $L \subseteq \Sigma^*$ es regular, entonces su lenguaje traducido $h(L) = \{h(w) : w \in L\} \subseteq \Gamma^*$ (llamado *imagen homomorfa*) también es regular sobre $\Gamma$.
    *Demostración:* Dada una expresión regular $r$ para $L$, basta reemplazar cada aparición de cada símbolo $a \in \Sigma$ en $r$ por la expresión regular correspondiente a la cadena $h(a)$; por las identidades $h(A \cup B) = h(A) \cup h(B)$, $h(AB) = h(A)h(B)$ y $h(A^*) = (h(A))^*$, la nueva expresión regular sobre $\Gamma$ denota exactamente $h(L)$. $\blacksquare$
 
 3. **Homomorfismo inverso (Teorema 3.5.1 de De Castro Korgi, pp. 74–75):** Dado $h : \Sigma^* \to \Gamma^*$ y un lenguaje $B \subseteq \Gamma^*$, la **imagen inversa** de $B$ por $h$ es:
@@ -229,7 +231,7 @@ Para construir el AFD $M_-$ que acepta $L_1 - L_2$, basta conservar exactamente 
    $$h^{-1}(L') = \{u 2 v : u, v \in \{0, 1\}^*,\; |u| = |v| \ge 1\}.$$
    Intersectando con el lenguaje regular $0^* 2 1^*$, también sería regular:
    $$h^{-1}(L') \cap 0^* 2 1^* = \{0^k 2 1^k : k \ge 1\}.$$
-   Finalmente, aplicando el homomorfismo $g : \{0, 1, 2\}^* \to \{0, 1\}^*$ definido por $g(0) = 0$, $g(1) = 1$ y $g(2) = \lambda$, por el Teorema 3.4.1 resultaría regular el lenguaje $g(\{0^k 2 1^k : k \ge 1\}) = \{0^k 1^k : k \ge 1\}$. Como $\{0^k 1^k : k \ge 1\}$ es isomorfo a $\{a^k b^k : k \ge 1\}$ (no regular por el Lema de bombeo), se llega a una contradicción. Por tanto, $L'$ no es regular.
+   Finalmente, aplicando el homomorfismo $g : \{0, 1, 2\}^* \to \{0, 1\}^*$ definido por $g(0) = 0$, $g(1) = 1$ y $g(2) = \lambda$, por el Teorema 3.4.1 resultaría regular el lenguaje $g(\{0^k 2 1^k : k \ge 1\}) = \{0^k 1^k : k \ge 1\}$. Como $\{0^k 1^k : k \ge 1\}$ tiene exactamente la misma estructura que $\{a^k b^k : k \ge 1\}$ (cambiando únicamente $0, 1$ por $a, b$, y sabemos que no es regular por el Lema de bombeo), se llega a una contradicción. Por tanto, $L'$ no es regular.
 
 ---
 

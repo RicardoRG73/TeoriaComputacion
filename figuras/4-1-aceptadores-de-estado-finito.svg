@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-label="4.1 Tres modelos equivalentes: AFD, AFN y AFN-λ">
+  <defs>
+    <linearGradient id="topGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B94A3E"/>
+      <stop offset="65%" stop-color="#204254"/>
+      <stop offset="100%" stop-color="#121B22"/>
+    </linearGradient>
+    <marker id="arrSteel" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#204254"/>
+    </marker>
+    <marker id="arrBrick" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#B94A3E"/>
+    </marker>
+    <marker id="arrInk" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#121B22"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="960" height="360" rx="12" fill="#FAF8F5" stroke="#CBD6DE" stroke-width="1.5"/>
+  <rect x="0" y="0" width="960" height="6" rx="3" fill="url(#topGrad)"/>
+  <text x="28" y="34" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="700" fill="#121B22">4.1 Tres modelos equivalentes: AFD, AFN y AFN-λ</text>
+  <text x="28" y="54" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="500" fill="#4E606D">Determinismo (1 camino) vs. no determinismo (ramas paralelas) vs. transiciones espontáneas λ</text>
+  <line x1="28" y1="64" x2="932" y2="64" stroke="#CBD6DE" stroke-width="1"/>
+<rect x="36" y="84" width="280" height="246" rx="10" fill="#FFFFFF" stroke="#204254" stroke-width="1.8"/>
+  <rect x="54" y="96" width="130" height="22" rx="11" fill="#204254"/><text x="119.0" y="111" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">AFD: Q × Σ → Q</text>
+  <line x1="44" y1="185" x2="75" y2="185" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="100" cy="185" r="22" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="100" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q0</text>
+  <circle cx="235" cy="185" r="22" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="235" cy="185" r="17" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="235" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q1</text>
+  <line x1="122" y1="185" x2="210" y2="185" stroke="#204254" stroke-width="2.2" marker-end="url(#arrSteel)"/>
+  <rect x="129.4" y="165.0" width="73.19999999999999" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="166.0" y="177.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#204254">a (único)</text>
+  <text x="176" y="265" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#121B22">Exactamente 1 transición</text>
+  <text x="176" y="290" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4E606D">por cada par (q, a)</text>
+  <rect x="340" y="84" width="280" height="246" rx="10" fill="#FFFFFF" stroke="#B94A3E" stroke-width="1.8"/>
+  <rect x="358" y="96" width="155" height="22" rx="11" fill="#B94A3E"/><text x="435.5" y="111" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">AFN: Q × Σ → P(Q)</text>
+  <line x1="344" y1="185" x2="375" y2="185" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="400" cy="185" r="22" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="400" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q0</text>
+  <circle cx="535" cy="145" r="20" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="535" y="150" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q1</text>
+  <circle cx="535" cy="225" r="20" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="535" cy="225" r="15" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="535" y="230" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q2</text>
+  <line x1="420" y1="174" x2="513" y2="148" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="457.1" y="141.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="466.5" y="153.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">1</text>
+  <line x1="420" y1="196" x2="513" y2="222" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="457.1" y="189.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="466.5" y="201.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">1</text>
+  <text x="480" y="275" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#121B22">Múltiples ramas posibles</text>
+  <text x="480" y="298" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4E606D">Acepta si ≥ 1 rama llega a F</text>
+  <rect x="644" y="84" width="280" height="246" rx="10" fill="#FFFFFF" stroke="#121B22" stroke-width="1.8"/>
+  <rect x="662" y="96" width="210" height="22" rx="11" fill="#121B22"/><text x="767.0" y="111" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">AFN-λ: Q × (Σ ∪ {λ}) → P(Q)</text>
+  <line x1="641" y1="185" x2="672" y2="185" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <circle cx="695" cy="185" r="20" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="695" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q0</text>
+  <circle cx="785" cy="185" r="20" fill="#EEF3F6" stroke="#204254" stroke-width="2.2"/>
+  <text x="785" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q1</text>
+  <circle cx="875" cy="185" r="20" fill="#FDF4F2" stroke="#B94A3E" stroke-width="2.2"/>
+  <circle cx="875" cy="185" r="15" fill="none" stroke="#B94A3E" stroke-width="1.6"/>
+  <text x="875" y="190" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" fill="#121B22">q2</text>
+  <line x1="715" y1="185" x2="762" y2="185" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="729.1" y="165.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="738.5" y="177.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">λ</text>
+  <line x1="805" y1="185" x2="852" y2="185" stroke="#B94A3E" stroke-width="2.2" marker-end="url(#arrBrick)"/>
+  <rect x="819.1" y="165.0" width="18.8" height="17" rx="4" fill="#FAF8F5" fill-opacity="0.92"/>
+  <text x="828.5" y="177.0" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#B94A3E">λ</text>
+  <text x="784" y="265" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#B94A3E">Clausura-λ: E(q0) = {q0, q1, q2}</text>
+  <text x="784" y="290" text-anchor="middle" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#204254">AFN-λ ≡ AFN ≡ AFD</text>
+</svg>
